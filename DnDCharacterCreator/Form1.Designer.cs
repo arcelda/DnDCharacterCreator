@@ -33,7 +33,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.buttonStart = new System.Windows.Forms.Button();
+            this.buttonNewPlayer = new System.Windows.Forms.Button();
             this.Welcome = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pictureBoxNonBinary = new System.Windows.Forms.PictureBox();
@@ -149,6 +149,7 @@
             this.finalDex = new System.Windows.Forms.Label();
             this.finalStr = new System.Windows.Forms.Label();
             this.labelCompleteStat = new System.Windows.Forms.Label();
+            this.buttonReturningPlayer = new System.Windows.Forms.Button();
             buttonRaceSelected = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -191,9 +192,10 @@
             buttonRaceSelected.AutoSize = true;
             buttonRaceSelected.BackColor = System.Drawing.Color.DarkSlateGray;
             buttonRaceSelected.ForeColor = System.Drawing.Color.White;
-            buttonRaceSelected.Location = new System.Drawing.Point(842, 501);
+            buttonRaceSelected.Location = new System.Drawing.Point(1684, 963);
+            buttonRaceSelected.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             buttonRaceSelected.Name = "buttonRaceSelected";
-            buttonRaceSelected.Size = new System.Drawing.Size(111, 27);
+            buttonRaceSelected.Size = new System.Drawing.Size(422, 85);
             buttonRaceSelected.TabIndex = 10;
             buttonRaceSelected.Text = "Race Selected";
             buttonRaceSelected.UseVisualStyleBackColor = false;
@@ -210,38 +212,42 @@
             this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Controls.Add(this.tabPage8);
             this.tabControl1.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Location = new System.Drawing.Point(24, 23);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(992, 614);
+            this.tabControl1.Size = new System.Drawing.Size(1984, 1181);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage1.BackgroundImage")));
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabPage1.Controls.Add(this.buttonStart);
+            this.tabPage1.Controls.Add(this.buttonReturningPlayer);
+            this.tabPage1.Controls.Add(this.buttonNewPlayer);
             this.tabPage1.Controls.Add(this.Welcome);
             this.tabPage1.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 26);
+            this.tabPage1.Location = new System.Drawing.Point(8, 48);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(984, 584);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPage1.Size = new System.Drawing.Size(1968, 1125);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Home";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // buttonStart
+            // buttonNewPlayer
             // 
-            this.buttonStart.BackColor = System.Drawing.Color.White;
-            this.buttonStart.Font = new System.Drawing.Font("Lucida Calligraphy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonStart.Location = new System.Drawing.Point(459, 318);
-            this.buttonStart.Name = "buttonStart";
-            this.buttonStart.Size = new System.Drawing.Size(75, 39);
-            this.buttonStart.TabIndex = 1;
-            this.buttonStart.Text = "Start";
-            this.buttonStart.UseVisualStyleBackColor = false;
-            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
+            this.buttonNewPlayer.BackColor = System.Drawing.Color.White;
+            this.buttonNewPlayer.Font = new System.Drawing.Font("Lucida Calligraphy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonNewPlayer.Location = new System.Drawing.Point(617, 499);
+            this.buttonNewPlayer.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.buttonNewPlayer.Name = "buttonNewPlayer";
+            this.buttonNewPlayer.Size = new System.Drawing.Size(306, 126);
+            this.buttonNewPlayer.TabIndex = 1;
+            this.buttonNewPlayer.Text = "New Player";
+            this.buttonNewPlayer.UseVisualStyleBackColor = false;
+            this.buttonNewPlayer.Click += new System.EventHandler(this.buttonStart_Click);
             // 
             // Welcome
             // 
@@ -249,9 +255,10 @@
             this.Welcome.BackColor = System.Drawing.Color.Black;
             this.Welcome.Font = new System.Drawing.Font("Lucida Calligraphy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Welcome.ForeColor = System.Drawing.Color.Transparent;
-            this.Welcome.Location = new System.Drawing.Point(145, 31);
+            this.Welcome.Location = new System.Drawing.Point(290, 60);
+            this.Welcome.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Welcome.Name = "Welcome";
-            this.Welcome.Size = new System.Drawing.Size(702, 24);
+            this.Welcome.Size = new System.Drawing.Size(1399, 49);
             this.Welcome.TabIndex = 0;
             this.Welcome.Text = "Welcome to the Character Creator based on Dungeons and Dragons ";
             // 
@@ -268,10 +275,11 @@
             this.tabPage2.Controls.Add(this.textBoxName);
             this.tabPage2.Controls.Add(this.labelWelcome);
             this.tabPage2.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 26);
+            this.tabPage2.Location = new System.Drawing.Point(8, 48);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(984, 584);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPage2.Size = new System.Drawing.Size(1968, 1125);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Basic Information";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -281,9 +289,10 @@
             this.pictureBoxNonBinary.BackgroundImage = global::DnDCharacterCreator.Properties.Resources.bg_f8f8f8_flat_750x_075_f_pad_750x1000_f8f8f8;
             this.pictureBoxNonBinary.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxNonBinary.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBoxNonBinary.Location = new System.Drawing.Point(782, 455);
+            this.pictureBoxNonBinary.Location = new System.Drawing.Point(1564, 875);
+            this.pictureBoxNonBinary.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBoxNonBinary.Name = "pictureBoxNonBinary";
-            this.pictureBoxNonBinary.Size = new System.Drawing.Size(62, 65);
+            this.pictureBoxNonBinary.Size = new System.Drawing.Size(120, 121);
             this.pictureBoxNonBinary.TabIndex = 7;
             this.pictureBoxNonBinary.TabStop = false;
             this.pictureBoxNonBinary.Visible = false;
@@ -295,9 +304,10 @@
             this.pictureBoxTransgender.BackgroundImage = global::DnDCharacterCreator.Properties.Resources.pngwing_com__3_;
             this.pictureBoxTransgender.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxTransgender.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBoxTransgender.Location = new System.Drawing.Point(689, 455);
+            this.pictureBoxTransgender.Location = new System.Drawing.Point(1378, 875);
+            this.pictureBoxTransgender.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBoxTransgender.Name = "pictureBoxTransgender";
-            this.pictureBoxTransgender.Size = new System.Drawing.Size(62, 65);
+            this.pictureBoxTransgender.Size = new System.Drawing.Size(120, 121);
             this.pictureBoxTransgender.TabIndex = 6;
             this.pictureBoxTransgender.TabStop = false;
             this.pictureBoxTransgender.Visible = false;
@@ -309,9 +319,10 @@
             this.pictureBoxFemale.BackgroundImage = global::DnDCharacterCreator.Properties.Resources.pngwing_com__2_;
             this.pictureBoxFemale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxFemale.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBoxFemale.Location = new System.Drawing.Point(782, 364);
+            this.pictureBoxFemale.Location = new System.Drawing.Point(1564, 700);
+            this.pictureBoxFemale.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBoxFemale.Name = "pictureBoxFemale";
-            this.pictureBoxFemale.Size = new System.Drawing.Size(62, 65);
+            this.pictureBoxFemale.Size = new System.Drawing.Size(120, 121);
             this.pictureBoxFemale.TabIndex = 5;
             this.pictureBoxFemale.TabStop = false;
             this.pictureBoxFemale.Visible = false;
@@ -323,9 +334,10 @@
             this.pictureBoxMale.BackgroundImage = global::DnDCharacterCreator.Properties.Resources.pngwing_com__1_;
             this.pictureBoxMale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxMale.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBoxMale.Location = new System.Drawing.Point(689, 364);
+            this.pictureBoxMale.Location = new System.Drawing.Point(1378, 700);
+            this.pictureBoxMale.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBoxMale.Name = "pictureBoxMale";
-            this.pictureBoxMale.Size = new System.Drawing.Size(62, 65);
+            this.pictureBoxMale.Size = new System.Drawing.Size(120, 121);
             this.pictureBoxMale.TabIndex = 4;
             this.pictureBoxMale.TabStop = false;
             this.pictureBoxMale.Visible = false;
@@ -338,9 +350,10 @@
             this.labelGender.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelGender.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGender.ForeColor = System.Drawing.Color.White;
-            this.labelGender.Location = new System.Drawing.Point(672, 321);
+            this.labelGender.Location = new System.Drawing.Point(1344, 617);
+            this.labelGender.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelGender.Name = "labelGender";
-            this.labelGender.Size = new System.Drawing.Size(194, 23);
+            this.labelGender.Size = new System.Drawing.Size(389, 43);
             this.labelGender.TabIndex = 3;
             this.labelGender.Text = "How do you identify?";
             this.labelGender.Visible = false;
@@ -351,9 +364,10 @@
             this.buttonNameConfirm.BackColor = System.Drawing.Color.DarkSlateGray;
             this.buttonNameConfirm.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F);
             this.buttonNameConfirm.ForeColor = System.Drawing.Color.White;
-            this.buttonNameConfirm.Location = new System.Drawing.Point(125, 189);
+            this.buttonNameConfirm.Location = new System.Drawing.Point(250, 363);
+            this.buttonNameConfirm.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonNameConfirm.Name = "buttonNameConfirm";
-            this.buttonNameConfirm.Size = new System.Drawing.Size(163, 36);
+            this.buttonNameConfirm.Size = new System.Drawing.Size(416, 85);
             this.buttonNameConfirm.TabIndex = 2;
             this.buttonNameConfirm.Text = "Submit name";
             this.buttonNameConfirm.UseVisualStyleBackColor = false;
@@ -362,9 +376,10 @@
             // textBoxName
             // 
             this.textBoxName.Font = new System.Drawing.Font("Informal Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxName.Location = new System.Drawing.Point(85, 134);
+            this.textBoxName.Location = new System.Drawing.Point(170, 258);
+            this.textBoxName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(242, 36);
+            this.textBoxName.Size = new System.Drawing.Size(480, 65);
             this.textBoxName.TabIndex = 1;
             this.textBoxName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -375,9 +390,10 @@
             this.labelWelcome.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelWelcome.Font = new System.Drawing.Font("Lucida Calligraphy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWelcome.ForeColor = System.Drawing.Color.White;
-            this.labelWelcome.Location = new System.Drawing.Point(39, 30);
+            this.labelWelcome.Location = new System.Drawing.Point(78, 58);
+            this.labelWelcome.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelWelcome.Name = "labelWelcome";
-            this.labelWelcome.Size = new System.Drawing.Size(634, 74);
+            this.labelWelcome.Size = new System.Drawing.Size(1259, 149);
             this.labelWelcome.TabIndex = 0;
             this.labelWelcome.Text = "You embark on a journey to become \r\nthe greatest adventurer the world has ever kn" +
     "own!\r\nWhat name should the denizons across the world hail you as?";
@@ -399,9 +415,10 @@
             this.tabPage3.Controls.Add(this.pictureHalfOrc);
             this.tabPage3.Controls.Add(this.pictureDragonBorn);
             this.tabPage3.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage3.Location = new System.Drawing.Point(4, 26);
+            this.tabPage3.Location = new System.Drawing.Point(8, 48);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(984, 584);
+            this.tabPage3.Size = new System.Drawing.Size(1968, 1125);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Race";
             // 
@@ -411,18 +428,20 @@
             this.labelPickRace.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelPickRace.Font = new System.Drawing.Font("Lucida Calligraphy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPickRace.ForeColor = System.Drawing.Color.White;
-            this.labelPickRace.Location = new System.Drawing.Point(163, 0);
+            this.labelPickRace.Location = new System.Drawing.Point(326, 0);
+            this.labelPickRace.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelPickRace.Name = "labelPickRace";
-            this.labelPickRace.Size = new System.Drawing.Size(160, 26);
+            this.labelPickRace.Size = new System.Drawing.Size(321, 51);
             this.labelPickRace.TabIndex = 9;
             this.labelPickRace.Text = "Pick your race";
             // 
             // pictureTiefling
             // 
             this.pictureTiefling.Image = global::DnDCharacterCreator.Properties.Resources.Tiefling;
-            this.pictureTiefling.Location = new System.Drawing.Point(3, 383);
+            this.pictureTiefling.Location = new System.Drawing.Point(6, 737);
+            this.pictureTiefling.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureTiefling.Name = "pictureTiefling";
-            this.pictureTiefling.Size = new System.Drawing.Size(164, 178);
+            this.pictureTiefling.Size = new System.Drawing.Size(328, 342);
             this.pictureTiefling.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureTiefling.TabIndex = 8;
             this.pictureTiefling.TabStop = false;
@@ -432,9 +451,10 @@
             // pictureHuman
             // 
             this.pictureHuman.Image = global::DnDCharacterCreator.Properties.Resources.Human;
-            this.pictureHuman.Location = new System.Drawing.Point(651, 383);
+            this.pictureHuman.Location = new System.Drawing.Point(1302, 737);
+            this.pictureHuman.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureHuman.Name = "pictureHuman";
-            this.pictureHuman.Size = new System.Drawing.Size(164, 178);
+            this.pictureHuman.Size = new System.Drawing.Size(328, 342);
             this.pictureHuman.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureHuman.TabIndex = 7;
             this.pictureHuman.TabStop = false;
@@ -445,9 +465,10 @@
             // 
             this.pictureHalfling.BackColor = System.Drawing.Color.Transparent;
             this.pictureHalfling.Image = global::DnDCharacterCreator.Properties.Resources.Halfling;
-            this.pictureHalfling.Location = new System.Drawing.Point(327, 383);
+            this.pictureHalfling.Location = new System.Drawing.Point(654, 737);
+            this.pictureHalfling.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureHalfling.Name = "pictureHalfling";
-            this.pictureHalfling.Size = new System.Drawing.Size(164, 178);
+            this.pictureHalfling.Size = new System.Drawing.Size(328, 342);
             this.pictureHalfling.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureHalfling.TabIndex = 6;
             this.pictureHalfling.TabStop = false;
@@ -457,9 +478,10 @@
             // pictureDwarf
             // 
             this.pictureDwarf.Image = global::DnDCharacterCreator.Properties.Resources.Dwarf;
-            this.pictureDwarf.Location = new System.Drawing.Point(327, 27);
+            this.pictureDwarf.Location = new System.Drawing.Point(654, 52);
+            this.pictureDwarf.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureDwarf.Name = "pictureDwarf";
-            this.pictureDwarf.Size = new System.Drawing.Size(164, 178);
+            this.pictureDwarf.Size = new System.Drawing.Size(328, 342);
             this.pictureDwarf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureDwarf.TabIndex = 5;
             this.pictureDwarf.TabStop = false;
@@ -470,9 +492,10 @@
             // pictureElf
             // 
             this.pictureElf.Image = global::DnDCharacterCreator.Properties.Resources.Elf;
-            this.pictureElf.Location = new System.Drawing.Point(651, 27);
+            this.pictureElf.Location = new System.Drawing.Point(1302, 52);
+            this.pictureElf.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureElf.Name = "pictureElf";
-            this.pictureElf.Size = new System.Drawing.Size(164, 178);
+            this.pictureElf.Size = new System.Drawing.Size(328, 342);
             this.pictureElf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureElf.TabIndex = 4;
             this.pictureElf.TabStop = false;
@@ -483,9 +506,10 @@
             // pictureGnome
             // 
             this.pictureGnome.Image = global::DnDCharacterCreator.Properties.Resources.Gnome;
-            this.pictureGnome.Location = new System.Drawing.Point(814, 203);
+            this.pictureGnome.Location = new System.Drawing.Point(1628, 390);
+            this.pictureGnome.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureGnome.Name = "pictureGnome";
-            this.pictureGnome.Size = new System.Drawing.Size(164, 178);
+            this.pictureGnome.Size = new System.Drawing.Size(328, 342);
             this.pictureGnome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureGnome.TabIndex = 3;
             this.pictureGnome.TabStop = false;
@@ -495,9 +519,10 @@
             // pictureHalfElf
             // 
             this.pictureHalfElf.Image = global::DnDCharacterCreator.Properties.Resources.Half_Elf;
-            this.pictureHalfElf.Location = new System.Drawing.Point(166, 203);
+            this.pictureHalfElf.Location = new System.Drawing.Point(332, 390);
+            this.pictureHalfElf.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureHalfElf.Name = "pictureHalfElf";
-            this.pictureHalfElf.Size = new System.Drawing.Size(164, 178);
+            this.pictureHalfElf.Size = new System.Drawing.Size(328, 342);
             this.pictureHalfElf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureHalfElf.TabIndex = 2;
             this.pictureHalfElf.TabStop = false;
@@ -509,9 +534,10 @@
             // pictureHalfOrc
             // 
             this.pictureHalfOrc.Image = global::DnDCharacterCreator.Properties.Resources.Half_Orc;
-            this.pictureHalfOrc.Location = new System.Drawing.Point(490, 203);
+            this.pictureHalfOrc.Location = new System.Drawing.Point(980, 390);
+            this.pictureHalfOrc.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureHalfOrc.Name = "pictureHalfOrc";
-            this.pictureHalfOrc.Size = new System.Drawing.Size(164, 178);
+            this.pictureHalfOrc.Size = new System.Drawing.Size(328, 342);
             this.pictureHalfOrc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureHalfOrc.TabIndex = 1;
             this.pictureHalfOrc.TabStop = false;
@@ -522,9 +548,10 @@
             // 
             this.pictureDragonBorn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureDragonBorn.Image = global::DnDCharacterCreator.Properties.Resources.Dragonborn;
-            this.pictureDragonBorn.Location = new System.Drawing.Point(3, 27);
+            this.pictureDragonBorn.Location = new System.Drawing.Point(6, 52);
+            this.pictureDragonBorn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureDragonBorn.Name = "pictureDragonBorn";
-            this.pictureDragonBorn.Size = new System.Drawing.Size(164, 178);
+            this.pictureDragonBorn.Size = new System.Drawing.Size(328, 342);
             this.pictureDragonBorn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureDragonBorn.TabIndex = 0;
             this.pictureDragonBorn.TabStop = false;
@@ -552,9 +579,10 @@
             this.tabPage4.Controls.Add(this.pictureBoxDruid);
             this.tabPage4.Controls.Add(this.pictureBoxBarbarian);
             this.tabPage4.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F);
-            this.tabPage4.Location = new System.Drawing.Point(4, 26);
+            this.tabPage4.Location = new System.Drawing.Point(8, 48);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(984, 584);
+            this.tabPage4.Size = new System.Drawing.Size(1968, 1125);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Role";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -563,9 +591,10 @@
             // 
             this.buttonRoleSelect.AutoSize = true;
             this.buttonRoleSelect.BackColor = System.Drawing.Color.OrangeRed;
-            this.buttonRoleSelect.Location = new System.Drawing.Point(794, 536);
+            this.buttonRoleSelect.Location = new System.Drawing.Point(1588, 1031);
+            this.buttonRoleSelect.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonRoleSelect.Name = "buttonRoleSelect";
-            this.buttonRoleSelect.Size = new System.Drawing.Size(107, 27);
+            this.buttonRoleSelect.Size = new System.Drawing.Size(408, 85);
             this.buttonRoleSelect.TabIndex = 12;
             this.buttonRoleSelect.Text = "Role Selected";
             this.buttonRoleSelect.UseVisualStyleBackColor = false;
@@ -577,9 +606,10 @@
             this.labelRoleSelect.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelRoleSelect.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRoleSelect.ForeColor = System.Drawing.Color.White;
-            this.labelRoleSelect.Location = new System.Drawing.Point(97, 15);
+            this.labelRoleSelect.Location = new System.Drawing.Point(194, 29);
+            this.labelRoleSelect.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelRoleSelect.Name = "labelRoleSelect";
-            this.labelRoleSelect.Size = new System.Drawing.Size(539, 23);
+            this.labelRoleSelect.Size = new System.Drawing.Size(1082, 43);
             this.labelRoleSelect.TabIndex = 11;
             this.labelRoleSelect.Text = "Choose the path that will help you fell these mighty opponents.";
             // 
@@ -587,9 +617,10 @@
             // 
             this.pictureBoxWizard.BackgroundImage = global::DnDCharacterCreator.Properties.Resources.Wizard;
             this.pictureBoxWizard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxWizard.Location = new System.Drawing.Point(829, 331);
+            this.pictureBoxWizard.Location = new System.Drawing.Point(1658, 637);
+            this.pictureBoxWizard.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBoxWizard.Name = "pictureBoxWizard";
-            this.pictureBoxWizard.Size = new System.Drawing.Size(98, 134);
+            this.pictureBoxWizard.Size = new System.Drawing.Size(196, 258);
             this.pictureBoxWizard.TabIndex = 10;
             this.pictureBoxWizard.TabStop = false;
             this.toolTipWizard.SetToolTip(this.pictureBoxWizard, "Wizard\r\n\r\nA scholarly magic-user capable of\r\nmanipulating the structures of reali" +
@@ -600,9 +631,10 @@
             // 
             this.pictureBoxPaladin.BackgroundImage = global::DnDCharacterCreator.Properties.Resources.Paladin;
             this.pictureBoxPaladin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxPaladin.Location = new System.Drawing.Point(828, 168);
+            this.pictureBoxPaladin.Location = new System.Drawing.Point(1656, 323);
+            this.pictureBoxPaladin.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBoxPaladin.Name = "pictureBoxPaladin";
-            this.pictureBoxPaladin.Size = new System.Drawing.Size(98, 134);
+            this.pictureBoxPaladin.Size = new System.Drawing.Size(196, 258);
             this.pictureBoxPaladin.TabIndex = 9;
             this.pictureBoxPaladin.TabStop = false;
             this.toolTipPaladin.SetToolTip(this.pictureBoxPaladin, "Paladin\r\n\r\nA holy warrior bound to a sacred oath. \r\n\r\nPrimary Stat: Strength & Ch" +
@@ -613,9 +645,10 @@
             // 
             this.pictureBoxMonk.BackgroundImage = global::DnDCharacterCreator.Properties.Resources.Monk;
             this.pictureBoxMonk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxMonk.Location = new System.Drawing.Point(690, 223);
+            this.pictureBoxMonk.Location = new System.Drawing.Point(1380, 429);
+            this.pictureBoxMonk.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBoxMonk.Name = "pictureBoxMonk";
-            this.pictureBoxMonk.Size = new System.Drawing.Size(98, 134);
+            this.pictureBoxMonk.Size = new System.Drawing.Size(196, 258);
             this.pictureBoxMonk.TabIndex = 8;
             this.pictureBoxMonk.TabStop = false;
             this.toolTipMonk.SetToolTip(this.pictureBoxMonk, "Monk\r\n\r\nA master of martial arts, harnessing the power of\r\nthe body in pursuit of" +
@@ -626,9 +659,10 @@
             // 
             this.pictureBoxWarlock.BackgroundImage = global::DnDCharacterCreator.Properties.Resources.Warlock;
             this.pictureBoxWarlock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxWarlock.Location = new System.Drawing.Point(690, 372);
+            this.pictureBoxWarlock.Location = new System.Drawing.Point(1380, 715);
+            this.pictureBoxWarlock.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBoxWarlock.Name = "pictureBoxWarlock";
-            this.pictureBoxWarlock.Size = new System.Drawing.Size(98, 134);
+            this.pictureBoxWarlock.Size = new System.Drawing.Size(196, 258);
             this.pictureBoxWarlock.TabIndex = 8;
             this.pictureBoxWarlock.TabStop = false;
             this.toolTipWarlock.SetToolTip(this.pictureBoxWarlock, "Warlock\r\n\r\nA wielder of magic that is derived from a\r\nbargain with an extraplanar" +
@@ -639,9 +673,10 @@
             // 
             this.pictureBoxSorcerer.BackgroundImage = global::DnDCharacterCreator.Properties.Resources.Sorcerer;
             this.pictureBoxSorcerer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxSorcerer.Location = new System.Drawing.Point(545, 440);
+            this.pictureBoxSorcerer.Location = new System.Drawing.Point(1090, 846);
+            this.pictureBoxSorcerer.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBoxSorcerer.Name = "pictureBoxSorcerer";
-            this.pictureBoxSorcerer.Size = new System.Drawing.Size(98, 134);
+            this.pictureBoxSorcerer.Size = new System.Drawing.Size(196, 258);
             this.pictureBoxSorcerer.TabIndex = 7;
             this.pictureBoxSorcerer.TabStop = false;
             this.toolTipSorcerer.SetToolTip(this.pictureBoxSorcerer, "Sorcerer\r\n\r\nA spellcaster who draws on inherent magic\r\nfrom a gift or bloodline.\r" +
@@ -652,9 +687,10 @@
             // 
             this.pictureBoxFighter.BackgroundImage = global::DnDCharacterCreator.Properties.Resources.Fighter;
             this.pictureBoxFighter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxFighter.Location = new System.Drawing.Point(545, 285);
+            this.pictureBoxFighter.Location = new System.Drawing.Point(1090, 548);
+            this.pictureBoxFighter.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBoxFighter.Name = "pictureBoxFighter";
-            this.pictureBoxFighter.Size = new System.Drawing.Size(98, 134);
+            this.pictureBoxFighter.Size = new System.Drawing.Size(196, 258);
             this.pictureBoxFighter.TabIndex = 6;
             this.pictureBoxFighter.TabStop = false;
             this.toolTipFighter.SetToolTip(this.pictureBoxFighter, "Fighter\r\n\r\nA master of martial combat, skilled with a variety\r\nof weapons armor. " +
@@ -665,9 +701,10 @@
             // 
             this.pictureBoxRanger.BackgroundImage = global::DnDCharacterCreator.Properties.Resources.Ranger;
             this.pictureBoxRanger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxRanger.Location = new System.Drawing.Point(320, 440);
+            this.pictureBoxRanger.Location = new System.Drawing.Point(640, 846);
+            this.pictureBoxRanger.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBoxRanger.Name = "pictureBoxRanger";
-            this.pictureBoxRanger.Size = new System.Drawing.Size(98, 134);
+            this.pictureBoxRanger.Size = new System.Drawing.Size(196, 258);
             this.pictureBoxRanger.TabIndex = 5;
             this.pictureBoxRanger.TabStop = false;
             this.toolTipRanger.SetToolTip(this.pictureBoxRanger, "Ranger\r\n\r\nA warrior who combats threats on the edges of civilization.\r\n\r\nPrimary " +
@@ -678,9 +715,10 @@
             // 
             this.pictureBoxCleric.BackgroundImage = global::DnDCharacterCreator.Properties.Resources.Cleric;
             this.pictureBoxCleric.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxCleric.Location = new System.Drawing.Point(320, 285);
+            this.pictureBoxCleric.Location = new System.Drawing.Point(640, 548);
+            this.pictureBoxCleric.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBoxCleric.Name = "pictureBoxCleric";
-            this.pictureBoxCleric.Size = new System.Drawing.Size(98, 134);
+            this.pictureBoxCleric.Size = new System.Drawing.Size(196, 258);
             this.pictureBoxCleric.TabIndex = 4;
             this.pictureBoxCleric.TabStop = false;
             this.toolTipCleric.SetToolTip(this.pictureBoxCleric, "Cleric\r\n\r\nA priestly champion who wields divine magic\r\nin service of a higher pow" +
@@ -691,9 +729,10 @@
             // 
             this.pictureBoxBard.BackgroundImage = global::DnDCharacterCreator.Properties.Resources.Bard;
             this.pictureBoxBard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxBard.Location = new System.Drawing.Point(175, 372);
+            this.pictureBoxBard.Location = new System.Drawing.Point(350, 715);
+            this.pictureBoxBard.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBoxBard.Name = "pictureBoxBard";
-            this.pictureBoxBard.Size = new System.Drawing.Size(98, 134);
+            this.pictureBoxBard.Size = new System.Drawing.Size(196, 258);
             this.pictureBoxBard.TabIndex = 3;
             this.pictureBoxBard.TabStop = false;
             this.toolTipBard.SetToolTip(this.pictureBoxBard, "Bard\r\n\r\nAn inspiring magician whose power echoes the \r\nmusic of creation. \r\n\r\nPri" +
@@ -704,9 +743,10 @@
             // 
             this.pictureBoxRogue.BackgroundImage = global::DnDCharacterCreator.Properties.Resources.Rogue;
             this.pictureBoxRogue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxRogue.Location = new System.Drawing.Point(175, 223);
+            this.pictureBoxRogue.Location = new System.Drawing.Point(350, 429);
+            this.pictureBoxRogue.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBoxRogue.Name = "pictureBoxRogue";
-            this.pictureBoxRogue.Size = new System.Drawing.Size(98, 134);
+            this.pictureBoxRogue.Size = new System.Drawing.Size(196, 258);
             this.pictureBoxRogue.TabIndex = 2;
             this.pictureBoxRogue.TabStop = false;
             this.toolTipRogue.SetToolTip(this.pictureBoxRogue, "Rogue\r\n\r\nA scoundrel who uses stealth and trickery to overcome\r\nobstacles and ene" +
@@ -717,9 +757,10 @@
             // 
             this.pictureBoxDruid.BackgroundImage = global::DnDCharacterCreator.Properties.Resources.Druid;
             this.pictureBoxDruid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxDruid.Location = new System.Drawing.Point(38, 331);
+            this.pictureBoxDruid.Location = new System.Drawing.Point(76, 637);
+            this.pictureBoxDruid.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBoxDruid.Name = "pictureBoxDruid";
-            this.pictureBoxDruid.Size = new System.Drawing.Size(98, 134);
+            this.pictureBoxDruid.Size = new System.Drawing.Size(196, 258);
             this.pictureBoxDruid.TabIndex = 1;
             this.pictureBoxDruid.TabStop = false;
             this.toolTipDruid.SetToolTip(this.pictureBoxDruid, "Druid\r\n\r\nA priest of the Old Faith, wielding the power\r\nof nature and adopting an" +
@@ -730,9 +771,10 @@
             // 
             this.pictureBoxBarbarian.BackgroundImage = global::DnDCharacterCreator.Properties.Resources.Barbarian;
             this.pictureBoxBarbarian.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxBarbarian.Location = new System.Drawing.Point(38, 168);
+            this.pictureBoxBarbarian.Location = new System.Drawing.Point(76, 323);
+            this.pictureBoxBarbarian.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBoxBarbarian.Name = "pictureBoxBarbarian";
-            this.pictureBoxBarbarian.Size = new System.Drawing.Size(98, 134);
+            this.pictureBoxBarbarian.Size = new System.Drawing.Size(196, 258);
             this.pictureBoxBarbarian.TabIndex = 0;
             this.pictureBoxBarbarian.TabStop = false;
             this.toolTipBarbarian.SetToolTip(this.pictureBoxBarbarian, "Barbarian\r\n\r\nA fierce warrior who can enter a battle rage. \r\n\r\nPrimary Stat: Stre" +
@@ -766,9 +808,10 @@
             this.tabPage5.Controls.Add(this.buttonAddStrength);
             this.tabPage5.Controls.Add(this.labelPoint);
             this.tabPage5.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F);
-            this.tabPage5.Location = new System.Drawing.Point(4, 26);
+            this.tabPage5.Location = new System.Drawing.Point(8, 48);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(984, 584);
+            this.tabPage5.Size = new System.Drawing.Size(1968, 1125);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Points";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -777,9 +820,10 @@
             // 
             this.buttonFinalize.AutoSize = true;
             this.buttonFinalize.BackColor = System.Drawing.Color.White;
-            this.buttonFinalize.Location = new System.Drawing.Point(709, 537);
+            this.buttonFinalize.Location = new System.Drawing.Point(1418, 1033);
+            this.buttonFinalize.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonFinalize.Name = "buttonFinalize";
-            this.buttonFinalize.Size = new System.Drawing.Size(122, 27);
+            this.buttonFinalize.Size = new System.Drawing.Size(470, 85);
             this.buttonFinalize.TabIndex = 21;
             this.buttonFinalize.Text = "Confirm Points";
             this.buttonFinalize.UseVisualStyleBackColor = false;
@@ -787,9 +831,10 @@
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(904, 537);
+            this.label6.Location = new System.Drawing.Point(1808, 1033);
+            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 27);
+            this.label6.Size = new System.Drawing.Size(86, 52);
             this.label6.TabIndex = 20;
             this.label6.Text = "/28";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -798,9 +843,10 @@
             // 
             this.labelUsedPoints.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelUsedPoints.ForeColor = System.Drawing.Color.White;
-            this.labelUsedPoints.Location = new System.Drawing.Point(855, 537);
+            this.labelUsedPoints.Location = new System.Drawing.Point(1710, 1033);
+            this.labelUsedPoints.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelUsedPoints.Name = "labelUsedPoints";
-            this.labelUsedPoints.Size = new System.Drawing.Size(43, 27);
+            this.labelUsedPoints.Size = new System.Drawing.Size(86, 52);
             this.labelUsedPoints.TabIndex = 19;
             this.labelUsedPoints.Text = "0";
             this.labelUsedPoints.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -809,9 +855,10 @@
             // 
             this.labelAllocatedInt.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelAllocatedInt.ForeColor = System.Drawing.Color.White;
-            this.labelAllocatedInt.Location = new System.Drawing.Point(855, 483);
+            this.labelAllocatedInt.Location = new System.Drawing.Point(1710, 929);
+            this.labelAllocatedInt.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelAllocatedInt.Name = "labelAllocatedInt";
-            this.labelAllocatedInt.Size = new System.Drawing.Size(43, 27);
+            this.labelAllocatedInt.Size = new System.Drawing.Size(86, 52);
             this.labelAllocatedInt.TabIndex = 18;
             this.labelAllocatedInt.Text = "0";
             this.labelAllocatedInt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -820,9 +867,10 @@
             // 
             this.labelAllocatedWis.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelAllocatedWis.ForeColor = System.Drawing.Color.White;
-            this.labelAllocatedWis.Location = new System.Drawing.Point(855, 428);
+            this.labelAllocatedWis.Location = new System.Drawing.Point(1710, 823);
+            this.labelAllocatedWis.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelAllocatedWis.Name = "labelAllocatedWis";
-            this.labelAllocatedWis.Size = new System.Drawing.Size(43, 27);
+            this.labelAllocatedWis.Size = new System.Drawing.Size(86, 52);
             this.labelAllocatedWis.TabIndex = 17;
             this.labelAllocatedWis.Text = "0";
             this.labelAllocatedWis.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -831,9 +879,10 @@
             // 
             this.labelAllocatedCha.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelAllocatedCha.ForeColor = System.Drawing.Color.White;
-            this.labelAllocatedCha.Location = new System.Drawing.Point(855, 373);
+            this.labelAllocatedCha.Location = new System.Drawing.Point(1710, 717);
+            this.labelAllocatedCha.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelAllocatedCha.Name = "labelAllocatedCha";
-            this.labelAllocatedCha.Size = new System.Drawing.Size(43, 27);
+            this.labelAllocatedCha.Size = new System.Drawing.Size(86, 52);
             this.labelAllocatedCha.TabIndex = 16;
             this.labelAllocatedCha.Text = "0";
             this.labelAllocatedCha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -842,9 +891,10 @@
             // 
             this.labelAllocatedCon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelAllocatedCon.ForeColor = System.Drawing.Color.White;
-            this.labelAllocatedCon.Location = new System.Drawing.Point(855, 318);
+            this.labelAllocatedCon.Location = new System.Drawing.Point(1710, 612);
+            this.labelAllocatedCon.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelAllocatedCon.Name = "labelAllocatedCon";
-            this.labelAllocatedCon.Size = new System.Drawing.Size(43, 27);
+            this.labelAllocatedCon.Size = new System.Drawing.Size(86, 52);
             this.labelAllocatedCon.TabIndex = 15;
             this.labelAllocatedCon.Text = "0";
             this.labelAllocatedCon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -853,9 +903,10 @@
             // 
             this.labelAllocatedDex.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelAllocatedDex.ForeColor = System.Drawing.Color.White;
-            this.labelAllocatedDex.Location = new System.Drawing.Point(855, 263);
+            this.labelAllocatedDex.Location = new System.Drawing.Point(1710, 506);
+            this.labelAllocatedDex.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelAllocatedDex.Name = "labelAllocatedDex";
-            this.labelAllocatedDex.Size = new System.Drawing.Size(43, 27);
+            this.labelAllocatedDex.Size = new System.Drawing.Size(86, 52);
             this.labelAllocatedDex.TabIndex = 14;
             this.labelAllocatedDex.Text = "0";
             this.labelAllocatedDex.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -864,9 +915,10 @@
             // 
             this.labelAllocatedStr.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelAllocatedStr.ForeColor = System.Drawing.Color.White;
-            this.labelAllocatedStr.Location = new System.Drawing.Point(855, 208);
+            this.labelAllocatedStr.Location = new System.Drawing.Point(1710, 400);
+            this.labelAllocatedStr.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelAllocatedStr.Name = "labelAllocatedStr";
-            this.labelAllocatedStr.Size = new System.Drawing.Size(43, 27);
+            this.labelAllocatedStr.Size = new System.Drawing.Size(86, 52);
             this.labelAllocatedStr.TabIndex = 13;
             this.labelAllocatedStr.Text = "0";
             this.labelAllocatedStr.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -875,9 +927,10 @@
             // 
             this.buttonMinusIntelligence.AutoSize = true;
             this.buttonMinusIntelligence.BackColor = System.Drawing.Color.White;
-            this.buttonMinusIntelligence.Location = new System.Drawing.Point(810, 483);
+            this.buttonMinusIntelligence.Location = new System.Drawing.Point(1620, 929);
+            this.buttonMinusIntelligence.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonMinusIntelligence.Name = "buttonMinusIntelligence";
-            this.buttonMinusIntelligence.Size = new System.Drawing.Size(26, 27);
+            this.buttonMinusIntelligence.Size = new System.Drawing.Size(66, 85);
             this.buttonMinusIntelligence.TabIndex = 12;
             this.buttonMinusIntelligence.Text = "-";
             this.buttonMinusIntelligence.UseVisualStyleBackColor = false;
@@ -887,9 +940,10 @@
             // 
             this.buttonMinusWisdom.AutoSize = true;
             this.buttonMinusWisdom.BackColor = System.Drawing.Color.White;
-            this.buttonMinusWisdom.Location = new System.Drawing.Point(810, 428);
+            this.buttonMinusWisdom.Location = new System.Drawing.Point(1620, 823);
+            this.buttonMinusWisdom.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonMinusWisdom.Name = "buttonMinusWisdom";
-            this.buttonMinusWisdom.Size = new System.Drawing.Size(26, 27);
+            this.buttonMinusWisdom.Size = new System.Drawing.Size(66, 85);
             this.buttonMinusWisdom.TabIndex = 11;
             this.buttonMinusWisdom.Text = "-";
             this.buttonMinusWisdom.UseVisualStyleBackColor = false;
@@ -899,9 +953,10 @@
             // 
             this.buttonMinusCharisma.AutoSize = true;
             this.buttonMinusCharisma.BackColor = System.Drawing.Color.White;
-            this.buttonMinusCharisma.Location = new System.Drawing.Point(810, 373);
+            this.buttonMinusCharisma.Location = new System.Drawing.Point(1620, 717);
+            this.buttonMinusCharisma.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonMinusCharisma.Name = "buttonMinusCharisma";
-            this.buttonMinusCharisma.Size = new System.Drawing.Size(26, 27);
+            this.buttonMinusCharisma.Size = new System.Drawing.Size(66, 85);
             this.buttonMinusCharisma.TabIndex = 10;
             this.buttonMinusCharisma.Text = "-";
             this.buttonMinusCharisma.UseVisualStyleBackColor = false;
@@ -911,9 +966,10 @@
             // 
             this.buttonMinusConstitution.AutoSize = true;
             this.buttonMinusConstitution.BackColor = System.Drawing.Color.White;
-            this.buttonMinusConstitution.Location = new System.Drawing.Point(810, 318);
+            this.buttonMinusConstitution.Location = new System.Drawing.Point(1620, 612);
+            this.buttonMinusConstitution.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonMinusConstitution.Name = "buttonMinusConstitution";
-            this.buttonMinusConstitution.Size = new System.Drawing.Size(26, 27);
+            this.buttonMinusConstitution.Size = new System.Drawing.Size(66, 85);
             this.buttonMinusConstitution.TabIndex = 9;
             this.buttonMinusConstitution.Text = "-";
             this.buttonMinusConstitution.UseVisualStyleBackColor = false;
@@ -923,9 +979,10 @@
             // 
             this.buttonMinusDexterity.AutoSize = true;
             this.buttonMinusDexterity.BackColor = System.Drawing.Color.White;
-            this.buttonMinusDexterity.Location = new System.Drawing.Point(810, 263);
+            this.buttonMinusDexterity.Location = new System.Drawing.Point(1620, 506);
+            this.buttonMinusDexterity.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonMinusDexterity.Name = "buttonMinusDexterity";
-            this.buttonMinusDexterity.Size = new System.Drawing.Size(26, 27);
+            this.buttonMinusDexterity.Size = new System.Drawing.Size(66, 85);
             this.buttonMinusDexterity.TabIndex = 8;
             this.buttonMinusDexterity.Text = "-";
             this.buttonMinusDexterity.UseVisualStyleBackColor = false;
@@ -935,9 +992,10 @@
             // 
             this.buttonMinusStrength.AutoSize = true;
             this.buttonMinusStrength.BackColor = System.Drawing.Color.White;
-            this.buttonMinusStrength.Location = new System.Drawing.Point(810, 208);
+            this.buttonMinusStrength.Location = new System.Drawing.Point(1620, 400);
+            this.buttonMinusStrength.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonMinusStrength.Name = "buttonMinusStrength";
-            this.buttonMinusStrength.Size = new System.Drawing.Size(26, 27);
+            this.buttonMinusStrength.Size = new System.Drawing.Size(66, 85);
             this.buttonMinusStrength.TabIndex = 7;
             this.buttonMinusStrength.Text = "-";
             this.buttonMinusStrength.UseVisualStyleBackColor = false;
@@ -947,9 +1005,10 @@
             // 
             this.buttonAddIntelligence.AutoSize = true;
             this.buttonAddIntelligence.BackColor = System.Drawing.Color.White;
-            this.buttonAddIntelligence.Location = new System.Drawing.Point(923, 483);
+            this.buttonAddIntelligence.Location = new System.Drawing.Point(1846, 929);
+            this.buttonAddIntelligence.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonAddIntelligence.Name = "buttonAddIntelligence";
-            this.buttonAddIntelligence.Size = new System.Drawing.Size(26, 27);
+            this.buttonAddIntelligence.Size = new System.Drawing.Size(82, 85);
             this.buttonAddIntelligence.TabIndex = 6;
             this.buttonAddIntelligence.Text = "+";
             this.buttonAddIntelligence.UseVisualStyleBackColor = false;
@@ -959,9 +1018,10 @@
             // 
             this.buttonAddWisdom.AutoSize = true;
             this.buttonAddWisdom.BackColor = System.Drawing.Color.White;
-            this.buttonAddWisdom.Location = new System.Drawing.Point(923, 428);
+            this.buttonAddWisdom.Location = new System.Drawing.Point(1846, 823);
+            this.buttonAddWisdom.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonAddWisdom.Name = "buttonAddWisdom";
-            this.buttonAddWisdom.Size = new System.Drawing.Size(26, 27);
+            this.buttonAddWisdom.Size = new System.Drawing.Size(82, 85);
             this.buttonAddWisdom.TabIndex = 5;
             this.buttonAddWisdom.Text = "+";
             this.buttonAddWisdom.UseVisualStyleBackColor = false;
@@ -971,9 +1031,10 @@
             // 
             this.buttonAddCharisma.AutoSize = true;
             this.buttonAddCharisma.BackColor = System.Drawing.Color.White;
-            this.buttonAddCharisma.Location = new System.Drawing.Point(923, 373);
+            this.buttonAddCharisma.Location = new System.Drawing.Point(1846, 717);
+            this.buttonAddCharisma.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonAddCharisma.Name = "buttonAddCharisma";
-            this.buttonAddCharisma.Size = new System.Drawing.Size(26, 27);
+            this.buttonAddCharisma.Size = new System.Drawing.Size(82, 85);
             this.buttonAddCharisma.TabIndex = 4;
             this.buttonAddCharisma.Text = "+";
             this.buttonAddCharisma.UseVisualStyleBackColor = false;
@@ -983,9 +1044,10 @@
             // 
             this.buttonAddConstitution.AutoSize = true;
             this.buttonAddConstitution.BackColor = System.Drawing.Color.White;
-            this.buttonAddConstitution.Location = new System.Drawing.Point(923, 318);
+            this.buttonAddConstitution.Location = new System.Drawing.Point(1846, 612);
+            this.buttonAddConstitution.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonAddConstitution.Name = "buttonAddConstitution";
-            this.buttonAddConstitution.Size = new System.Drawing.Size(26, 27);
+            this.buttonAddConstitution.Size = new System.Drawing.Size(82, 85);
             this.buttonAddConstitution.TabIndex = 3;
             this.buttonAddConstitution.Text = "+";
             this.buttonAddConstitution.UseVisualStyleBackColor = false;
@@ -995,9 +1057,10 @@
             // 
             this.buttonAddDexterity.AutoSize = true;
             this.buttonAddDexterity.BackColor = System.Drawing.Color.White;
-            this.buttonAddDexterity.Location = new System.Drawing.Point(923, 263);
+            this.buttonAddDexterity.Location = new System.Drawing.Point(1846, 506);
+            this.buttonAddDexterity.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonAddDexterity.Name = "buttonAddDexterity";
-            this.buttonAddDexterity.Size = new System.Drawing.Size(26, 27);
+            this.buttonAddDexterity.Size = new System.Drawing.Size(82, 85);
             this.buttonAddDexterity.TabIndex = 2;
             this.buttonAddDexterity.Text = "+";
             this.buttonAddDexterity.UseVisualStyleBackColor = false;
@@ -1007,9 +1070,10 @@
             // 
             this.buttonAddStrength.AutoSize = true;
             this.buttonAddStrength.BackColor = System.Drawing.Color.White;
-            this.buttonAddStrength.Location = new System.Drawing.Point(923, 208);
+            this.buttonAddStrength.Location = new System.Drawing.Point(1846, 400);
+            this.buttonAddStrength.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonAddStrength.Name = "buttonAddStrength";
-            this.buttonAddStrength.Size = new System.Drawing.Size(26, 27);
+            this.buttonAddStrength.Size = new System.Drawing.Size(82, 85);
             this.buttonAddStrength.TabIndex = 1;
             this.buttonAddStrength.Text = "+";
             this.buttonAddStrength.UseVisualStyleBackColor = false;
@@ -1020,9 +1084,10 @@
             this.labelPoint.AutoSize = true;
             this.labelPoint.Font = new System.Drawing.Font("Lucida Calligraphy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPoint.ForeColor = System.Drawing.Color.White;
-            this.labelPoint.Location = new System.Drawing.Point(518, 0);
+            this.labelPoint.Location = new System.Drawing.Point(1036, 0);
+            this.labelPoint.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelPoint.Name = "labelPoint";
-            this.labelPoint.Size = new System.Drawing.Size(448, 105);
+            this.labelPoint.Size = new System.Drawing.Size(900, 205);
             this.labelPoint.TabIndex = 0;
             this.labelPoint.Text = "Here are extra points to allocate to your character.\r\nYou only get 28 and after 1" +
     " trait reaches 14, it will\r\ntake 2 allocation points to increase a trait.\r\n\r\nCho" +
@@ -1036,9 +1101,10 @@
             this.tabPage6.Controls.Add(this.textBoxSelfIntro);
             this.tabPage6.Controls.Add(this.labelAboutYou);
             this.tabPage6.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F);
-            this.tabPage6.Location = new System.Drawing.Point(4, 26);
+            this.tabPage6.Location = new System.Drawing.Point(8, 48);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(984, 584);
+            this.tabPage6.Size = new System.Drawing.Size(1968, 1125);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Background";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -1048,9 +1114,10 @@
             this.buttonSubmitBackground.AutoSize = true;
             this.buttonSubmitBackground.BackColor = System.Drawing.Color.Indigo;
             this.buttonSubmitBackground.ForeColor = System.Drawing.Color.White;
-            this.buttonSubmitBackground.Location = new System.Drawing.Point(286, 542);
+            this.buttonSubmitBackground.Location = new System.Drawing.Point(572, 1042);
+            this.buttonSubmitBackground.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonSubmitBackground.Name = "buttonSubmitBackground";
-            this.buttonSubmitBackground.Size = new System.Drawing.Size(81, 27);
+            this.buttonSubmitBackground.Size = new System.Drawing.Size(302, 85);
             this.buttonSubmitBackground.TabIndex = 2;
             this.buttonSubmitBackground.Text = "Complete";
             this.buttonSubmitBackground.UseVisualStyleBackColor = false;
@@ -1060,10 +1127,11 @@
             // 
             this.textBoxSelfIntro.BackColor = System.Drawing.Color.Indigo;
             this.textBoxSelfIntro.ForeColor = System.Drawing.Color.White;
-            this.textBoxSelfIntro.Location = new System.Drawing.Point(17, 163);
+            this.textBoxSelfIntro.Location = new System.Drawing.Point(34, 313);
+            this.textBoxSelfIntro.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.textBoxSelfIntro.Multiline = true;
             this.textBoxSelfIntro.Name = "textBoxSelfIntro";
-            this.textBoxSelfIntro.Size = new System.Drawing.Size(237, 402);
+            this.textBoxSelfIntro.Size = new System.Drawing.Size(470, 769);
             this.textBoxSelfIntro.TabIndex = 1;
             // 
             // labelAboutYou
@@ -1071,9 +1139,10 @@
             this.labelAboutYou.AutoSize = true;
             this.labelAboutYou.Font = new System.Drawing.Font("Lucida Calligraphy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAboutYou.ForeColor = System.Drawing.Color.White;
-            this.labelAboutYou.Location = new System.Drawing.Point(3, 22);
+            this.labelAboutYou.Location = new System.Drawing.Point(6, 42);
+            this.labelAboutYou.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelAboutYou.Name = "labelAboutYou";
-            this.labelAboutYou.Size = new System.Drawing.Size(384, 48);
+            this.labelAboutYou.Size = new System.Drawing.Size(770, 98);
             this.labelAboutYou.TabIndex = 0;
             this.labelAboutYou.Text = "Tell us your story, your history, how \r\nyou came to where you are today.";
             // 
@@ -1084,9 +1153,10 @@
             this.tabPage7.Controls.Add(this.buttonExport);
             this.tabPage7.Controls.Add(this.labelExport);
             this.tabPage7.Controls.Add(this.labelRecap);
-            this.tabPage7.Location = new System.Drawing.Point(4, 26);
+            this.tabPage7.Location = new System.Drawing.Point(8, 48);
+            this.tabPage7.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(984, 584);
+            this.tabPage7.Size = new System.Drawing.Size(1968, 1125);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Welcome!";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -1095,9 +1165,10 @@
             // 
             this.buttonExport.AutoSize = true;
             this.buttonExport.BackColor = System.Drawing.Color.BlueViolet;
-            this.buttonExport.Location = new System.Drawing.Point(341, 534);
+            this.buttonExport.Location = new System.Drawing.Point(682, 1027);
+            this.buttonExport.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonExport.Name = "buttonExport";
-            this.buttonExport.Size = new System.Drawing.Size(141, 27);
+            this.buttonExport.Size = new System.Drawing.Size(538, 85);
             this.buttonExport.TabIndex = 2;
             this.buttonExport.Text = "Export Character";
             this.buttonExport.UseVisualStyleBackColor = false;
@@ -1108,18 +1179,20 @@
             this.labelExport.AutoSize = true;
             this.labelExport.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelExport.ForeColor = System.Drawing.Color.White;
-            this.labelExport.Location = new System.Drawing.Point(276, 502);
+            this.labelExport.Location = new System.Drawing.Point(552, 965);
+            this.labelExport.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelExport.Name = "labelExport";
-            this.labelExport.Size = new System.Drawing.Size(270, 19);
+            this.labelExport.Size = new System.Drawing.Size(541, 36);
             this.labelExport.TabIndex = 1;
             this.labelExport.Text = "Click here to export your information";
             // 
             // labelRecap
             // 
             this.labelRecap.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelRecap.Location = new System.Drawing.Point(15, 16);
+            this.labelRecap.Location = new System.Drawing.Point(30, 31);
+            this.labelRecap.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelRecap.Name = "labelRecap";
-            this.labelRecap.Size = new System.Drawing.Size(380, 384);
+            this.labelRecap.Size = new System.Drawing.Size(760, 738);
             this.labelRecap.TabIndex = 0;
             this.labelRecap.Visible = false;
             // 
@@ -1131,9 +1204,10 @@
             this.tabPage8.Controls.Add(this.linkLabelCharSheet);
             this.tabPage8.Controls.Add(this.linkLabelRoles);
             this.tabPage8.Controls.Add(this.linkLabelRaces);
-            this.tabPage8.Location = new System.Drawing.Point(4, 26);
+            this.tabPage8.Location = new System.Drawing.Point(8, 48);
+            this.tabPage8.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(984, 584);
+            this.tabPage8.Size = new System.Drawing.Size(1968, 1125);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "Sources";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -1144,9 +1218,10 @@
             this.linkLabelCreator.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.linkLabelCreator.Font = new System.Drawing.Font("Lucida Calligraphy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelCreator.LinkColor = System.Drawing.Color.DarkRed;
-            this.linkLabelCreator.Location = new System.Drawing.Point(627, 53);
+            this.linkLabelCreator.Location = new System.Drawing.Point(1254, 102);
+            this.linkLabelCreator.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.linkLabelCreator.Name = "linkLabelCreator";
-            this.linkLabelCreator.Size = new System.Drawing.Size(315, 26);
+            this.linkLabelCreator.Size = new System.Drawing.Size(627, 51);
             this.linkLabelCreator.TabIndex = 3;
             this.linkLabelCreator.TabStop = true;
             this.linkLabelCreator.Text = "Character Creation Reference";
@@ -1157,9 +1232,10 @@
             this.linkLabelCharSheet.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.linkLabelCharSheet.Font = new System.Drawing.Font("Lucida Calligraphy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelCharSheet.LinkColor = System.Drawing.Color.DarkRed;
-            this.linkLabelCharSheet.Location = new System.Drawing.Point(429, 53);
+            this.linkLabelCharSheet.Location = new System.Drawing.Point(858, 102);
+            this.linkLabelCharSheet.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.linkLabelCharSheet.Name = "linkLabelCharSheet";
-            this.linkLabelCharSheet.Size = new System.Drawing.Size(174, 26);
+            this.linkLabelCharSheet.Size = new System.Drawing.Size(345, 51);
             this.linkLabelCharSheet.TabIndex = 2;
             this.linkLabelCharSheet.TabStop = true;
             this.linkLabelCharSheet.Text = "Character Sheet";
@@ -1170,9 +1246,10 @@
             this.linkLabelRoles.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.linkLabelRoles.Font = new System.Drawing.Font("Lucida Calligraphy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelRoles.LinkColor = System.Drawing.Color.DarkRed;
-            this.linkLabelRoles.Location = new System.Drawing.Point(234, 53);
+            this.linkLabelRoles.Location = new System.Drawing.Point(468, 102);
+            this.linkLabelRoles.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.linkLabelRoles.Name = "linkLabelRoles";
-            this.linkLabelRoles.Size = new System.Drawing.Size(171, 26);
+            this.linkLabelRoles.Size = new System.Drawing.Size(345, 51);
             this.linkLabelRoles.TabIndex = 1;
             this.linkLabelRoles.TabStop = true;
             this.linkLabelRoles.Text = "Roles Reference";
@@ -1184,9 +1261,10 @@
             this.linkLabelRaces.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.linkLabelRaces.Font = new System.Drawing.Font("Lucida Calligraphy", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelRaces.LinkColor = System.Drawing.Color.DarkRed;
-            this.linkLabelRaces.Location = new System.Drawing.Point(42, 53);
+            this.linkLabelRaces.Location = new System.Drawing.Point(84, 102);
+            this.linkLabelRaces.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.linkLabelRaces.Name = "linkLabelRaces";
-            this.linkLabelRaces.Size = new System.Drawing.Size(168, 26);
+            this.linkLabelRaces.Size = new System.Drawing.Size(339, 51);
             this.linkLabelRaces.TabIndex = 0;
             this.linkLabelRaces.TabStop = true;
             this.linkLabelRaces.Text = "Race Reference";
@@ -1195,9 +1273,10 @@
             // buttonLastPage
             // 
             this.buttonLastPage.BackColor = System.Drawing.Color.White;
-            this.buttonLastPage.Location = new System.Drawing.Point(725, 632);
+            this.buttonLastPage.Location = new System.Drawing.Point(1450, 1215);
+            this.buttonLastPage.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonLastPage.Name = "buttonLastPage";
-            this.buttonLastPage.Size = new System.Drawing.Size(52, 23);
+            this.buttonLastPage.Size = new System.Drawing.Size(104, 44);
             this.buttonLastPage.TabIndex = 4;
             this.buttonLastPage.Text = ">>";
             this.buttonLastPage.UseVisualStyleBackColor = false;
@@ -1207,9 +1286,10 @@
             // buttonNextPage
             // 
             this.buttonNextPage.BackColor = System.Drawing.Color.White;
-            this.buttonNextPage.Location = new System.Drawing.Point(625, 632);
+            this.buttonNextPage.Location = new System.Drawing.Point(1250, 1215);
+            this.buttonNextPage.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonNextPage.Name = "buttonNextPage";
-            this.buttonNextPage.Size = new System.Drawing.Size(52, 23);
+            this.buttonNextPage.Size = new System.Drawing.Size(104, 44);
             this.buttonNextPage.TabIndex = 3;
             this.buttonNextPage.Text = ">";
             this.buttonNextPage.UseVisualStyleBackColor = false;
@@ -1220,9 +1300,10 @@
             // 
             this.buttonHome.BackColor = System.Drawing.Color.White;
             this.buttonHome.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F);
-            this.buttonHome.Location = new System.Drawing.Point(502, 632);
+            this.buttonHome.Location = new System.Drawing.Point(1004, 1215);
+            this.buttonHome.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonHome.Name = "buttonHome";
-            this.buttonHome.Size = new System.Drawing.Size(75, 23);
+            this.buttonHome.Size = new System.Drawing.Size(150, 44);
             this.buttonHome.TabIndex = 2;
             this.buttonHome.Text = "Home";
             this.buttonHome.UseVisualStyleBackColor = false;
@@ -1231,9 +1312,10 @@
             // buttonPreviousPage
             // 
             this.buttonPreviousPage.BackColor = System.Drawing.Color.White;
-            this.buttonPreviousPage.Location = new System.Drawing.Point(402, 632);
+            this.buttonPreviousPage.Location = new System.Drawing.Point(804, 1215);
+            this.buttonPreviousPage.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonPreviousPage.Name = "buttonPreviousPage";
-            this.buttonPreviousPage.Size = new System.Drawing.Size(52, 23);
+            this.buttonPreviousPage.Size = new System.Drawing.Size(104, 44);
             this.buttonPreviousPage.TabIndex = 1;
             this.buttonPreviousPage.Text = "<";
             this.buttonPreviousPage.UseVisualStyleBackColor = false;
@@ -1242,9 +1324,10 @@
             // buttonFirstPage
             // 
             this.buttonFirstPage.BackColor = System.Drawing.Color.White;
-            this.buttonFirstPage.Location = new System.Drawing.Point(302, 632);
+            this.buttonFirstPage.Location = new System.Drawing.Point(604, 1215);
+            this.buttonFirstPage.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.buttonFirstPage.Name = "buttonFirstPage";
-            this.buttonFirstPage.Size = new System.Drawing.Size(52, 23);
+            this.buttonFirstPage.Size = new System.Drawing.Size(104, 44);
             this.buttonFirstPage.TabIndex = 0;
             this.buttonFirstPage.Text = "<<";
             this.buttonFirstPage.UseVisualStyleBackColor = false;
@@ -1255,9 +1338,10 @@
             this.labelNameString.AutoSize = true;
             this.labelNameString.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
             this.labelNameString.ForeColor = System.Drawing.Color.White;
-            this.labelNameString.Location = new System.Drawing.Point(1011, 87);
+            this.labelNameString.Location = new System.Drawing.Point(2022, 167);
+            this.labelNameString.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelNameString.Name = "labelNameString";
-            this.labelNameString.Size = new System.Drawing.Size(0, 21);
+            this.labelNameString.Size = new System.Drawing.Size(0, 41);
             this.labelNameString.TabIndex = 5;
             this.labelNameString.Visible = false;
             // 
@@ -1266,9 +1350,10 @@
             this.labelGenderString.AutoSize = true;
             this.labelGenderString.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
             this.labelGenderString.ForeColor = System.Drawing.Color.White;
-            this.labelGenderString.Location = new System.Drawing.Point(1011, 125);
+            this.labelGenderString.Location = new System.Drawing.Point(2022, 240);
+            this.labelGenderString.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelGenderString.Name = "labelGenderString";
-            this.labelGenderString.Size = new System.Drawing.Size(0, 21);
+            this.labelGenderString.Size = new System.Drawing.Size(0, 41);
             this.labelGenderString.TabIndex = 6;
             this.labelGenderString.Visible = false;
             // 
@@ -1277,9 +1362,10 @@
             this.labelRaceString.AutoSize = true;
             this.labelRaceString.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
             this.labelRaceString.ForeColor = System.Drawing.Color.White;
-            this.labelRaceString.Location = new System.Drawing.Point(1011, 163);
+            this.labelRaceString.Location = new System.Drawing.Point(2022, 313);
+            this.labelRaceString.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelRaceString.Name = "labelRaceString";
-            this.labelRaceString.Size = new System.Drawing.Size(0, 21);
+            this.labelRaceString.Size = new System.Drawing.Size(0, 41);
             this.labelRaceString.TabIndex = 7;
             this.labelRaceString.Visible = false;
             // 
@@ -1288,9 +1374,10 @@
             this.labelStrength.AutoSize = true;
             this.labelStrength.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
             this.labelStrength.ForeColor = System.Drawing.Color.White;
-            this.labelStrength.Location = new System.Drawing.Point(1011, 252);
+            this.labelStrength.Location = new System.Drawing.Point(2022, 485);
+            this.labelStrength.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelStrength.Name = "labelStrength";
-            this.labelStrength.Size = new System.Drawing.Size(0, 21);
+            this.labelStrength.Size = new System.Drawing.Size(0, 41);
             this.labelStrength.TabIndex = 8;
             this.labelStrength.Visible = false;
             // 
@@ -1299,9 +1386,10 @@
             this.labelDexterity.AutoSize = true;
             this.labelDexterity.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
             this.labelDexterity.ForeColor = System.Drawing.Color.White;
-            this.labelDexterity.Location = new System.Drawing.Point(1011, 307);
+            this.labelDexterity.Location = new System.Drawing.Point(2022, 590);
+            this.labelDexterity.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelDexterity.Name = "labelDexterity";
-            this.labelDexterity.Size = new System.Drawing.Size(0, 21);
+            this.labelDexterity.Size = new System.Drawing.Size(0, 41);
             this.labelDexterity.TabIndex = 9;
             this.labelDexterity.Visible = false;
             // 
@@ -1310,9 +1398,10 @@
             this.labelConstitution.AutoSize = true;
             this.labelConstitution.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
             this.labelConstitution.ForeColor = System.Drawing.Color.White;
-            this.labelConstitution.Location = new System.Drawing.Point(1011, 362);
+            this.labelConstitution.Location = new System.Drawing.Point(2022, 696);
+            this.labelConstitution.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelConstitution.Name = "labelConstitution";
-            this.labelConstitution.Size = new System.Drawing.Size(0, 21);
+            this.labelConstitution.Size = new System.Drawing.Size(0, 41);
             this.labelConstitution.TabIndex = 10;
             this.labelConstitution.Visible = false;
             // 
@@ -1321,9 +1410,10 @@
             this.labelIntelligence.AutoSize = true;
             this.labelIntelligence.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
             this.labelIntelligence.ForeColor = System.Drawing.Color.White;
-            this.labelIntelligence.Location = new System.Drawing.Point(1011, 527);
+            this.labelIntelligence.Location = new System.Drawing.Point(2022, 1013);
+            this.labelIntelligence.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelIntelligence.Name = "labelIntelligence";
-            this.labelIntelligence.Size = new System.Drawing.Size(0, 21);
+            this.labelIntelligence.Size = new System.Drawing.Size(0, 41);
             this.labelIntelligence.TabIndex = 13;
             this.labelIntelligence.Visible = false;
             // 
@@ -1332,9 +1422,10 @@
             this.labelWisdom.AutoSize = true;
             this.labelWisdom.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
             this.labelWisdom.ForeColor = System.Drawing.Color.White;
-            this.labelWisdom.Location = new System.Drawing.Point(1011, 472);
+            this.labelWisdom.Location = new System.Drawing.Point(2022, 908);
+            this.labelWisdom.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelWisdom.Name = "labelWisdom";
-            this.labelWisdom.Size = new System.Drawing.Size(0, 21);
+            this.labelWisdom.Size = new System.Drawing.Size(0, 41);
             this.labelWisdom.TabIndex = 12;
             this.labelWisdom.Visible = false;
             // 
@@ -1343,9 +1434,10 @@
             this.labelCharisma.AutoSize = true;
             this.labelCharisma.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
             this.labelCharisma.ForeColor = System.Drawing.Color.White;
-            this.labelCharisma.Location = new System.Drawing.Point(1011, 417);
+            this.labelCharisma.Location = new System.Drawing.Point(2022, 802);
+            this.labelCharisma.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelCharisma.Name = "labelCharisma";
-            this.labelCharisma.Size = new System.Drawing.Size(0, 21);
+            this.labelCharisma.Size = new System.Drawing.Size(0, 41);
             this.labelCharisma.TabIndex = 11;
             this.labelCharisma.Visible = false;
             // 
@@ -1354,9 +1446,10 @@
             this.labelRoleString.AutoSize = true;
             this.labelRoleString.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
             this.labelRoleString.ForeColor = System.Drawing.Color.White;
-            this.labelRoleString.Location = new System.Drawing.Point(1011, 201);
+            this.labelRoleString.Location = new System.Drawing.Point(2022, 387);
+            this.labelRoleString.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelRoleString.Name = "labelRoleString";
-            this.labelRoleString.Size = new System.Drawing.Size(0, 21);
+            this.labelRoleString.Size = new System.Drawing.Size(0, 41);
             this.labelRoleString.TabIndex = 14;
             this.labelRoleString.Visible = false;
             // 
@@ -1365,9 +1458,10 @@
             this.finalInt.AutoSize = true;
             this.finalInt.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
             this.finalInt.ForeColor = System.Drawing.Color.White;
-            this.finalInt.Location = new System.Drawing.Point(1214, 527);
+            this.finalInt.Location = new System.Drawing.Point(2428, 1013);
+            this.finalInt.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.finalInt.Name = "finalInt";
-            this.finalInt.Size = new System.Drawing.Size(0, 21);
+            this.finalInt.Size = new System.Drawing.Size(0, 41);
             this.finalInt.TabIndex = 20;
             this.finalInt.Visible = false;
             // 
@@ -1376,9 +1470,10 @@
             this.finalWis.AutoSize = true;
             this.finalWis.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
             this.finalWis.ForeColor = System.Drawing.Color.White;
-            this.finalWis.Location = new System.Drawing.Point(1214, 472);
+            this.finalWis.Location = new System.Drawing.Point(2428, 908);
+            this.finalWis.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.finalWis.Name = "finalWis";
-            this.finalWis.Size = new System.Drawing.Size(0, 21);
+            this.finalWis.Size = new System.Drawing.Size(0, 41);
             this.finalWis.TabIndex = 19;
             this.finalWis.Visible = false;
             // 
@@ -1387,9 +1482,10 @@
             this.finalCha.AutoSize = true;
             this.finalCha.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
             this.finalCha.ForeColor = System.Drawing.Color.White;
-            this.finalCha.Location = new System.Drawing.Point(1214, 417);
+            this.finalCha.Location = new System.Drawing.Point(2428, 802);
+            this.finalCha.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.finalCha.Name = "finalCha";
-            this.finalCha.Size = new System.Drawing.Size(0, 21);
+            this.finalCha.Size = new System.Drawing.Size(0, 41);
             this.finalCha.TabIndex = 18;
             this.finalCha.Visible = false;
             // 
@@ -1398,9 +1494,10 @@
             this.finalCon.AutoSize = true;
             this.finalCon.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
             this.finalCon.ForeColor = System.Drawing.Color.White;
-            this.finalCon.Location = new System.Drawing.Point(1214, 362);
+            this.finalCon.Location = new System.Drawing.Point(2428, 696);
+            this.finalCon.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.finalCon.Name = "finalCon";
-            this.finalCon.Size = new System.Drawing.Size(0, 21);
+            this.finalCon.Size = new System.Drawing.Size(0, 41);
             this.finalCon.TabIndex = 17;
             this.finalCon.Visible = false;
             // 
@@ -1409,9 +1506,10 @@
             this.finalDex.AutoSize = true;
             this.finalDex.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
             this.finalDex.ForeColor = System.Drawing.Color.White;
-            this.finalDex.Location = new System.Drawing.Point(1214, 307);
+            this.finalDex.Location = new System.Drawing.Point(2428, 590);
+            this.finalDex.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.finalDex.Name = "finalDex";
-            this.finalDex.Size = new System.Drawing.Size(0, 21);
+            this.finalDex.Size = new System.Drawing.Size(0, 41);
             this.finalDex.TabIndex = 16;
             this.finalDex.Visible = false;
             // 
@@ -1420,9 +1518,10 @@
             this.finalStr.AutoSize = true;
             this.finalStr.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
             this.finalStr.ForeColor = System.Drawing.Color.White;
-            this.finalStr.Location = new System.Drawing.Point(1214, 252);
+            this.finalStr.Location = new System.Drawing.Point(2428, 485);
+            this.finalStr.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.finalStr.Name = "finalStr";
-            this.finalStr.Size = new System.Drawing.Size(0, 21);
+            this.finalStr.Size = new System.Drawing.Size(0, 41);
             this.finalStr.TabIndex = 15;
             this.finalStr.Visible = false;
             // 
@@ -1431,19 +1530,31 @@
             this.labelCompleteStat.AutoSize = true;
             this.labelCompleteStat.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
             this.labelCompleteStat.ForeColor = System.Drawing.Color.White;
-            this.labelCompleteStat.Location = new System.Drawing.Point(1185, 202);
+            this.labelCompleteStat.Location = new System.Drawing.Point(2370, 388);
+            this.labelCompleteStat.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelCompleteStat.Name = "labelCompleteStat";
-            this.labelCompleteStat.Size = new System.Drawing.Size(133, 21);
+            this.labelCompleteStat.Size = new System.Drawing.Size(268, 41);
             this.labelCompleteStat.TabIndex = 21;
             this.labelCompleteStat.Text = "Complete Stats";
             this.labelCompleteStat.Visible = false;
             // 
+            // buttonReturningPlayer
+            // 
+            this.buttonReturningPlayer.Font = new System.Drawing.Font("Lucida Calligraphy", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonReturningPlayer.Location = new System.Drawing.Point(1218, 499);
+            this.buttonReturningPlayer.Name = "buttonReturningPlayer";
+            this.buttonReturningPlayer.Size = new System.Drawing.Size(332, 126);
+            this.buttonReturningPlayer.TabIndex = 2;
+            this.buttonReturningPlayer.Text = "Returning Player";
+            this.buttonReturningPlayer.UseVisualStyleBackColor = true;
+            this.buttonReturningPlayer.Click += new System.EventHandler(this.buttonReturningPlayer_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1316, 659);
+            this.ClientSize = new System.Drawing.Size(2632, 1267);
             this.Controls.Add(this.labelCompleteStat);
             this.Controls.Add(this.finalInt);
             this.Controls.Add(this.finalWis);
@@ -1468,6 +1579,7 @@
             this.Controls.Add(this.buttonNextPage);
             this.Controls.Add(this.buttonFirstPage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Character Creator";
@@ -1528,7 +1640,7 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.Button buttonStart;
+        private System.Windows.Forms.Button buttonNewPlayer;
         private System.Windows.Forms.Button buttonLastPage;
         private System.Windows.Forms.Button buttonNextPage;
         private System.Windows.Forms.Button buttonHome;
@@ -1639,6 +1751,7 @@
         private System.Windows.Forms.LinkLabel linkLabelCreator;
         private System.Windows.Forms.LinkLabel linkLabelCharSheet;
         private System.Windows.Forms.Label labelCompleteStat;
+        private System.Windows.Forms.Button buttonReturningPlayer;
     }
 }
 

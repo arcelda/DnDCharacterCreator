@@ -877,6 +877,14 @@ namespace DnDCharacterCreator
             Process.Start("https://www.dndbeyond.com/classes");
         }
 
+        private void buttonReturningPlayer_Click(object sender, EventArgs e)
+        {
+            FormReturningPlayer formReturningPlayer = new FormReturningPlayer();
+            this.Hide();
+            formReturningPlayer.ShowDialog();
+
+        }
+
         private void buttonMinusWisdom_Click(object sender, EventArgs e)
         {
             if (usedPoints > 0 && alloted_wisdom - 1 != -1)
