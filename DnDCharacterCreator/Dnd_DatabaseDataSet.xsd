@@ -11,7 +11,7 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="Dnd_DatabaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="Dnd_DatabaseDataSet" msprop:Generator_DataSetName="Dnd_DatabaseDataSet">
+  <xs:element name="Dnd_DatabaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Dnd_DatabaseDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Dnd_DatabaseDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded" />
     </xs:complexType>
