@@ -56,7 +56,8 @@ namespace DnDCharacterCreator
 
             try
             {
-                SR = new StreamReader(FilePath); SR.ReadToEnd(); 
+                SR = new StreamReader(FilePath);
+                //SR.ReadToEnd(); 
                 
                 while (!SR.EndOfStream)
                 {
