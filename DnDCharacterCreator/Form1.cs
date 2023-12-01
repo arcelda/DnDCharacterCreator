@@ -879,9 +879,11 @@ namespace DnDCharacterCreator
 
         private void buttonReturningPlayer_Click(object sender, EventArgs e)
         {
-            FormReturningPlayer formReturningPlayer = new FormReturningPlayer();
+            //FormReturningPlayer formReturningPlayer = new FormReturningPlayer();
+            LoginPage loginPage = new LoginPage();
             this.Hide();
-            formReturningPlayer.ShowDialog();
+            //formReturningPlayer.ShowDialog();
+            loginPage.ShowDialog();
 
         }
 

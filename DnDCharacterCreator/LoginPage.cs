@@ -17,16 +17,6 @@ namespace DnDCharacterCreator
             InitializeComponent();
         }
 
-        private void label_Header_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void button_Login_Click(object sender, EventArgs e)
         {
             string filepath = "Logins.txt";
@@ -37,9 +27,9 @@ namespace DnDCharacterCreator
 
             if (logins.Check())
             {
-                Form1 form = new Form1();
+                FormReturningPlayer formReturningPlayer = new FormReturningPlayer();
                 this.Hide();
-                form.ShowDialog();
+                formReturningPlayer.ShowDialog();
             }
             
             else

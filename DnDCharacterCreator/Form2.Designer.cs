@@ -30,13 +30,20 @@ namespace DnDCharacterCreator
         private void InitializeComponent()
         {
             this.buttonHome = new System.Windows.Forms.Button();
-            this.labelTest = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.characterSheetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchPlayersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchSessionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonHome
             // 
-            this.buttonHome.Location = new System.Drawing.Point(306, 177);
-            this.buttonHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonHome.Location = new System.Drawing.Point(446, 492);
+            this.buttonHome.Margin = new System.Windows.Forms.Padding(2);
             this.buttonHome.Name = "buttonHome";
             this.buttonHome.Size = new System.Drawing.Size(60, 38);
             this.buttonHome.TabIndex = 0;
@@ -44,26 +51,73 @@ namespace DnDCharacterCreator
             this.buttonHome.UseVisualStyleBackColor = true;
             this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
             // 
-            // labelTest
+            // menuStrip1
             // 
-            this.labelTest.AutoSize = true;
-            this.labelTest.Location = new System.Drawing.Point(129, 69);
-            this.labelTest.Name = "labelTest";
-            this.labelTest.Size = new System.Drawing.Size(42, 13);
-            this.labelTest.TabIndex = 1;
-            this.labelTest.Text = "Testing";
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.characterSheetToolStripMenuItem,
+            this.searchToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(979, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // characterSheetToolStripMenuItem
+            // 
+            this.characterSheetToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewInfoToolStripMenuItem,
+            this.editInfoToolStripMenuItem});
+            this.characterSheetToolStripMenuItem.Name = "characterSheetToolStripMenuItem";
+            this.characterSheetToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
+            this.characterSheetToolStripMenuItem.Text = "Character Sheet";
+            // 
+            // searchToolStripMenuItem
+            // 
+            this.searchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.searchPlayersToolStripMenuItem,
+            this.searchSessionsToolStripMenuItem});
+            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.searchToolStripMenuItem.Text = "Search";
+            // 
+            // searchPlayersToolStripMenuItem
+            // 
+            this.searchPlayersToolStripMenuItem.Name = "searchPlayersToolStripMenuItem";
+            this.searchPlayersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.searchPlayersToolStripMenuItem.Text = "Search Players";
+            // 
+            // searchSessionsToolStripMenuItem
+            // 
+            this.searchSessionsToolStripMenuItem.Name = "searchSessionsToolStripMenuItem";
+            this.searchSessionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.searchSessionsToolStripMenuItem.Text = "Search Sessions";
+            // 
+            // viewInfoToolStripMenuItem
+            // 
+            this.viewInfoToolStripMenuItem.Name = "viewInfoToolStripMenuItem";
+            this.viewInfoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewInfoToolStripMenuItem.Text = "View Info";
+            // 
+            // editInfoToolStripMenuItem
+            // 
+            this.editInfoToolStripMenuItem.Name = "editInfoToolStripMenuItem";
+            this.editInfoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editInfoToolStripMenuItem.Text = "Edit Info";
             // 
             // FormReturningPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 234);
-            this.Controls.Add(this.labelTest);
+            this.ClientSize = new System.Drawing.Size(979, 541);
             this.Controls.Add(this.buttonHome);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormReturningPlayer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Welcome Back";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -72,6 +126,12 @@ namespace DnDCharacterCreator
         #endregion
 
         private System.Windows.Forms.Button buttonHome;
-        private System.Windows.Forms.Label labelTest;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem characterSheetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewInfoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editInfoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem searchPlayersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem searchSessionsToolStripMenuItem;
     }
 }
