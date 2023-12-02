@@ -235,6 +235,7 @@
             this.FillSearchToolStripButton.Name = "FillSearchToolStripButton";
             this.FillSearchToolStripButton.Size = new System.Drawing.Size(81, 22);
             this.FillSearchToolStripButton.Text = "Search Player";
+            this.FillSearchToolStripButton.Click += new System.EventHandler(this.FillSearchToolStripButton_Click);
             // 
             // SearchPlayer
             // 

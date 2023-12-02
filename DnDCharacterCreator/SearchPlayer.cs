@@ -31,5 +31,18 @@ namespace DnDCharacterCreator
             this.characterTableTableAdapter.Fill(this.dnd_DatabaseDataSet1.CharacterTable);
 
         }
+
+        private void FillSearchToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.characterTableTableAdapter.FillBySearchName(this.dnd_DatabaseDataSet1.CharacterTable, searchToolStripTextBox.Text);
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+                                   
+        }
     }
 }
