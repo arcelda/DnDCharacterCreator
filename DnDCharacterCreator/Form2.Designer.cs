@@ -32,6 +32,10 @@ namespace DnDCharacterCreator
             this.buttonHome = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.characterSheetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+<<<<<<< HEAD
+=======
+            this.viewInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+>>>>>>> 0cca3bb2912fa0de8f9893c5d0ccacd3a81e035b
             this.editInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchPlayersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,6 +75,15 @@ namespace DnDCharacterCreator
             this.characterSheetToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
             this.characterSheetToolStripMenuItem.Text = "Character Sheet";
             // 
+<<<<<<< HEAD
+=======
+            // viewInfoToolStripMenuItem
+            // 
+            this.viewInfoToolStripMenuItem.Name = "viewInfoToolStripMenuItem";
+            this.viewInfoToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.viewInfoToolStripMenuItem.Text = "View Info";
+            // 
+>>>>>>> 0cca3bb2912fa0de8f9893c5d0ccacd3a81e035b
             // editInfoToolStripMenuItem
             // 
             this.editInfoToolStripMenuItem.Name = "editInfoToolStripMenuItem";
@@ -89,14 +102,14 @@ namespace DnDCharacterCreator
             // searchPlayersToolStripMenuItem
             // 
             this.searchPlayersToolStripMenuItem.Name = "searchPlayersToolStripMenuItem";
-            this.searchPlayersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.searchPlayersToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.searchPlayersToolStripMenuItem.Text = "Search Players";
             this.searchPlayersToolStripMenuItem.Click += new System.EventHandler(this.searchPlayersToolStripMenuItem_Click);
             // 
             // searchSessionsToolStripMenuItem
             // 
             this.searchSessionsToolStripMenuItem.Name = "searchSessionsToolStripMenuItem";
-            this.searchSessionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.searchSessionsToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.searchSessionsToolStripMenuItem.Text = "Search Sessions";
             // 
             // pictureBox1

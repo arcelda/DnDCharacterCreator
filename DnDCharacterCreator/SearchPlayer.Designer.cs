@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
             this.SuspendLayout();
             // 
             // SearchPlayer
@@ -39,6 +40,12 @@
             this.Text = "SearchPlayer";
             this.ResumeLayout(false);
 
+=======
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "SearchPlayer";
+>>>>>>> 0cca3bb2912fa0de8f9893c5d0ccacd3a81e035b
         }
 
         #endregion
