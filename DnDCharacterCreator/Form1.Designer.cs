@@ -29,9 +29,52 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Button buttonRaceSelected;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.Button buttonRaceSelected;
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.buttonLastPage = new System.Windows.Forms.Button();
+            this.buttonNextPage = new System.Windows.Forms.Button();
+            this.buttonHome = new System.Windows.Forms.Button();
+            this.buttonPreviousPage = new System.Windows.Forms.Button();
+            this.buttonFirstPage = new System.Windows.Forms.Button();
+            this.toolTipDragonborn = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipDwarf = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipElf = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipHalfElf = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipHalfOrc = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipGnome = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipTiefling = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipHalfling = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipHuman = new System.Windows.Forms.ToolTip(this.components);
+            this.labelNameString = new System.Windows.Forms.Label();
+            this.labelGenderString = new System.Windows.Forms.Label();
+            this.labelRaceString = new System.Windows.Forms.Label();
+            this.labelStrength = new System.Windows.Forms.Label();
+            this.labelDexterity = new System.Windows.Forms.Label();
+            this.labelConstitution = new System.Windows.Forms.Label();
+            this.labelIntelligence = new System.Windows.Forms.Label();
+            this.labelWisdom = new System.Windows.Forms.Label();
+            this.labelCharisma = new System.Windows.Forms.Label();
+            this.toolTipBarbarian = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipRogue = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipCleric = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipFighter = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipMonk = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipPaladin = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipDruid = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipBard = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipRanger = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipSorcerer = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipWarlock = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipWizard = new System.Windows.Forms.ToolTip(this.components);
+            this.labelRoleString = new System.Windows.Forms.Label();
+            this.finalInt = new System.Windows.Forms.Label();
+            this.finalWis = new System.Windows.Forms.Label();
+            this.finalCha = new System.Windows.Forms.Label();
+            this.finalCon = new System.Windows.Forms.Label();
+            this.finalDex = new System.Windows.Forms.Label();
+            this.finalStr = new System.Windows.Forms.Label();
+            this.labelCompleteStat = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.buttonReturningPlayer = new System.Windows.Forms.Button();
             this.buttonNewPlayer = new System.Windows.Forms.Button();
@@ -107,49 +150,6 @@
             this.linkLabelCharSheet = new System.Windows.Forms.LinkLabel();
             this.linkLabelRoles = new System.Windows.Forms.LinkLabel();
             this.linkLabelRaces = new System.Windows.Forms.LinkLabel();
-            this.buttonLastPage = new System.Windows.Forms.Button();
-            this.buttonNextPage = new System.Windows.Forms.Button();
-            this.buttonHome = new System.Windows.Forms.Button();
-            this.buttonPreviousPage = new System.Windows.Forms.Button();
-            this.buttonFirstPage = new System.Windows.Forms.Button();
-            this.toolTipDragonborn = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTipDwarf = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTipElf = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTipHalfElf = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTipHalfOrc = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTipGnome = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTipTiefling = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTipHalfling = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTipHuman = new System.Windows.Forms.ToolTip(this.components);
-            this.labelNameString = new System.Windows.Forms.Label();
-            this.labelGenderString = new System.Windows.Forms.Label();
-            this.labelRaceString = new System.Windows.Forms.Label();
-            this.labelStrength = new System.Windows.Forms.Label();
-            this.labelDexterity = new System.Windows.Forms.Label();
-            this.labelConstitution = new System.Windows.Forms.Label();
-            this.labelIntelligence = new System.Windows.Forms.Label();
-            this.labelWisdom = new System.Windows.Forms.Label();
-            this.labelCharisma = new System.Windows.Forms.Label();
-            this.toolTipBarbarian = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTipRogue = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTipCleric = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTipFighter = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTipMonk = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTipPaladin = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTipDruid = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTipBard = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTipRanger = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTipSorcerer = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTipWarlock = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTipWizard = new System.Windows.Forms.ToolTip(this.components);
-            this.labelRoleString = new System.Windows.Forms.Label();
-            this.finalInt = new System.Windows.Forms.Label();
-            this.finalWis = new System.Windows.Forms.Label();
-            this.finalCha = new System.Windows.Forms.Label();
-            this.finalCon = new System.Windows.Forms.Label();
-            this.finalDex = new System.Windows.Forms.Label();
-            this.finalStr = new System.Windows.Forms.Label();
-            this.labelCompleteStat = new System.Windows.Forms.Label();
             buttonRaceSelected = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -187,19 +187,6 @@
             this.tabPage8.SuspendLayout();
             this.SuspendLayout();
             // 
-            // buttonRaceSelected
-            // 
-            buttonRaceSelected.AutoSize = true;
-            buttonRaceSelected.BackColor = System.Drawing.Color.DarkSlateGray;
-            buttonRaceSelected.ForeColor = System.Drawing.Color.White;
-            buttonRaceSelected.Location = new System.Drawing.Point(842, 501);
-            buttonRaceSelected.Name = "buttonRaceSelected";
-            buttonRaceSelected.Size = new System.Drawing.Size(211, 44);
-            buttonRaceSelected.TabIndex = 10;
-            buttonRaceSelected.Text = "Race Selected";
-            buttonRaceSelected.UseVisualStyleBackColor = false;
-            buttonRaceSelected.Click += new System.EventHandler(this.buttonDone_Click);
-            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -214,8 +201,254 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(992, 614);
+            this.tabControl1.Size = new System.Drawing.Size(1023, 614);
             this.tabControl1.TabIndex = 0;
+            // 
+            // buttonLastPage
+            // 
+            this.buttonLastPage.BackColor = System.Drawing.Color.White;
+            this.buttonLastPage.Location = new System.Drawing.Point(725, 632);
+            this.buttonLastPage.Name = "buttonLastPage";
+            this.buttonLastPage.Size = new System.Drawing.Size(52, 23);
+            this.buttonLastPage.TabIndex = 4;
+            this.buttonLastPage.Text = ">>";
+            this.buttonLastPage.UseVisualStyleBackColor = false;
+            this.buttonLastPage.Visible = false;
+            this.buttonLastPage.Click += new System.EventHandler(this.buttonLastPage_Click);
+            // 
+            // buttonNextPage
+            // 
+            this.buttonNextPage.BackColor = System.Drawing.Color.White;
+            this.buttonNextPage.Location = new System.Drawing.Point(625, 632);
+            this.buttonNextPage.Name = "buttonNextPage";
+            this.buttonNextPage.Size = new System.Drawing.Size(52, 23);
+            this.buttonNextPage.TabIndex = 3;
+            this.buttonNextPage.Text = ">";
+            this.buttonNextPage.UseVisualStyleBackColor = false;
+            this.buttonNextPage.Visible = false;
+            this.buttonNextPage.Click += new System.EventHandler(this.buttonNextPage_Click);
+            // 
+            // buttonHome
+            // 
+            this.buttonHome.BackColor = System.Drawing.Color.White;
+            this.buttonHome.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F);
+            this.buttonHome.Location = new System.Drawing.Point(502, 632);
+            this.buttonHome.Name = "buttonHome";
+            this.buttonHome.Size = new System.Drawing.Size(75, 23);
+            this.buttonHome.TabIndex = 2;
+            this.buttonHome.Text = "Home";
+            this.buttonHome.UseVisualStyleBackColor = false;
+            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
+            // 
+            // buttonPreviousPage
+            // 
+            this.buttonPreviousPage.BackColor = System.Drawing.Color.White;
+            this.buttonPreviousPage.Location = new System.Drawing.Point(402, 632);
+            this.buttonPreviousPage.Name = "buttonPreviousPage";
+            this.buttonPreviousPage.Size = new System.Drawing.Size(52, 23);
+            this.buttonPreviousPage.TabIndex = 1;
+            this.buttonPreviousPage.Text = "<";
+            this.buttonPreviousPage.UseVisualStyleBackColor = false;
+            this.buttonPreviousPage.Click += new System.EventHandler(this.buttonPreviousPage_Click);
+            // 
+            // buttonFirstPage
+            // 
+            this.buttonFirstPage.BackColor = System.Drawing.Color.White;
+            this.buttonFirstPage.Location = new System.Drawing.Point(302, 632);
+            this.buttonFirstPage.Name = "buttonFirstPage";
+            this.buttonFirstPage.Size = new System.Drawing.Size(52, 23);
+            this.buttonFirstPage.TabIndex = 0;
+            this.buttonFirstPage.Text = "<<";
+            this.buttonFirstPage.UseVisualStyleBackColor = false;
+            this.buttonFirstPage.Click += new System.EventHandler(this.buttonFirstPage_Click);
+            // 
+            // labelNameString
+            // 
+            this.labelNameString.AutoSize = true;
+            this.labelNameString.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
+            this.labelNameString.ForeColor = System.Drawing.Color.White;
+            this.labelNameString.Location = new System.Drawing.Point(1011, 87);
+            this.labelNameString.Name = "labelNameString";
+            this.labelNameString.Size = new System.Drawing.Size(0, 21);
+            this.labelNameString.TabIndex = 5;
+            this.labelNameString.Visible = false;
+            // 
+            // labelGenderString
+            // 
+            this.labelGenderString.AutoSize = true;
+            this.labelGenderString.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
+            this.labelGenderString.ForeColor = System.Drawing.Color.White;
+            this.labelGenderString.Location = new System.Drawing.Point(1011, 125);
+            this.labelGenderString.Name = "labelGenderString";
+            this.labelGenderString.Size = new System.Drawing.Size(0, 21);
+            this.labelGenderString.TabIndex = 6;
+            this.labelGenderString.Visible = false;
+            // 
+            // labelRaceString
+            // 
+            this.labelRaceString.AutoSize = true;
+            this.labelRaceString.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
+            this.labelRaceString.ForeColor = System.Drawing.Color.White;
+            this.labelRaceString.Location = new System.Drawing.Point(1011, 163);
+            this.labelRaceString.Name = "labelRaceString";
+            this.labelRaceString.Size = new System.Drawing.Size(0, 21);
+            this.labelRaceString.TabIndex = 7;
+            this.labelRaceString.Visible = false;
+            // 
+            // labelStrength
+            // 
+            this.labelStrength.AutoSize = true;
+            this.labelStrength.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
+            this.labelStrength.ForeColor = System.Drawing.Color.White;
+            this.labelStrength.Location = new System.Drawing.Point(1011, 252);
+            this.labelStrength.Name = "labelStrength";
+            this.labelStrength.Size = new System.Drawing.Size(0, 21);
+            this.labelStrength.TabIndex = 8;
+            this.labelStrength.Visible = false;
+            // 
+            // labelDexterity
+            // 
+            this.labelDexterity.AutoSize = true;
+            this.labelDexterity.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
+            this.labelDexterity.ForeColor = System.Drawing.Color.White;
+            this.labelDexterity.Location = new System.Drawing.Point(1011, 307);
+            this.labelDexterity.Name = "labelDexterity";
+            this.labelDexterity.Size = new System.Drawing.Size(0, 21);
+            this.labelDexterity.TabIndex = 9;
+            this.labelDexterity.Visible = false;
+            // 
+            // labelConstitution
+            // 
+            this.labelConstitution.AutoSize = true;
+            this.labelConstitution.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
+            this.labelConstitution.ForeColor = System.Drawing.Color.White;
+            this.labelConstitution.Location = new System.Drawing.Point(1011, 362);
+            this.labelConstitution.Name = "labelConstitution";
+            this.labelConstitution.Size = new System.Drawing.Size(0, 21);
+            this.labelConstitution.TabIndex = 10;
+            this.labelConstitution.Visible = false;
+            // 
+            // labelIntelligence
+            // 
+            this.labelIntelligence.AutoSize = true;
+            this.labelIntelligence.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
+            this.labelIntelligence.ForeColor = System.Drawing.Color.White;
+            this.labelIntelligence.Location = new System.Drawing.Point(1011, 527);
+            this.labelIntelligence.Name = "labelIntelligence";
+            this.labelIntelligence.Size = new System.Drawing.Size(0, 21);
+            this.labelIntelligence.TabIndex = 13;
+            this.labelIntelligence.Visible = false;
+            // 
+            // labelWisdom
+            // 
+            this.labelWisdom.AutoSize = true;
+            this.labelWisdom.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
+            this.labelWisdom.ForeColor = System.Drawing.Color.White;
+            this.labelWisdom.Location = new System.Drawing.Point(1011, 472);
+            this.labelWisdom.Name = "labelWisdom";
+            this.labelWisdom.Size = new System.Drawing.Size(0, 21);
+            this.labelWisdom.TabIndex = 12;
+            this.labelWisdom.Visible = false;
+            // 
+            // labelCharisma
+            // 
+            this.labelCharisma.AutoSize = true;
+            this.labelCharisma.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
+            this.labelCharisma.ForeColor = System.Drawing.Color.White;
+            this.labelCharisma.Location = new System.Drawing.Point(1011, 417);
+            this.labelCharisma.Name = "labelCharisma";
+            this.labelCharisma.Size = new System.Drawing.Size(0, 21);
+            this.labelCharisma.TabIndex = 11;
+            this.labelCharisma.Visible = false;
+            // 
+            // labelRoleString
+            // 
+            this.labelRoleString.AutoSize = true;
+            this.labelRoleString.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
+            this.labelRoleString.ForeColor = System.Drawing.Color.White;
+            this.labelRoleString.Location = new System.Drawing.Point(1011, 201);
+            this.labelRoleString.Name = "labelRoleString";
+            this.labelRoleString.Size = new System.Drawing.Size(0, 21);
+            this.labelRoleString.TabIndex = 14;
+            this.labelRoleString.Visible = false;
+            // 
+            // finalInt
+            // 
+            this.finalInt.AutoSize = true;
+            this.finalInt.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
+            this.finalInt.ForeColor = System.Drawing.Color.White;
+            this.finalInt.Location = new System.Drawing.Point(1214, 527);
+            this.finalInt.Name = "finalInt";
+            this.finalInt.Size = new System.Drawing.Size(0, 21);
+            this.finalInt.TabIndex = 20;
+            this.finalInt.Visible = false;
+            // 
+            // finalWis
+            // 
+            this.finalWis.AutoSize = true;
+            this.finalWis.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
+            this.finalWis.ForeColor = System.Drawing.Color.White;
+            this.finalWis.Location = new System.Drawing.Point(1214, 472);
+            this.finalWis.Name = "finalWis";
+            this.finalWis.Size = new System.Drawing.Size(0, 21);
+            this.finalWis.TabIndex = 19;
+            this.finalWis.Visible = false;
+            // 
+            // finalCha
+            // 
+            this.finalCha.AutoSize = true;
+            this.finalCha.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
+            this.finalCha.ForeColor = System.Drawing.Color.White;
+            this.finalCha.Location = new System.Drawing.Point(1214, 417);
+            this.finalCha.Name = "finalCha";
+            this.finalCha.Size = new System.Drawing.Size(0, 21);
+            this.finalCha.TabIndex = 18;
+            this.finalCha.Visible = false;
+            // 
+            // finalCon
+            // 
+            this.finalCon.AutoSize = true;
+            this.finalCon.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
+            this.finalCon.ForeColor = System.Drawing.Color.White;
+            this.finalCon.Location = new System.Drawing.Point(1214, 362);
+            this.finalCon.Name = "finalCon";
+            this.finalCon.Size = new System.Drawing.Size(0, 21);
+            this.finalCon.TabIndex = 17;
+            this.finalCon.Visible = false;
+            // 
+            // finalDex
+            // 
+            this.finalDex.AutoSize = true;
+            this.finalDex.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
+            this.finalDex.ForeColor = System.Drawing.Color.White;
+            this.finalDex.Location = new System.Drawing.Point(1214, 307);
+            this.finalDex.Name = "finalDex";
+            this.finalDex.Size = new System.Drawing.Size(0, 21);
+            this.finalDex.TabIndex = 16;
+            this.finalDex.Visible = false;
+            // 
+            // finalStr
+            // 
+            this.finalStr.AutoSize = true;
+            this.finalStr.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
+            this.finalStr.ForeColor = System.Drawing.Color.White;
+            this.finalStr.Location = new System.Drawing.Point(1214, 252);
+            this.finalStr.Name = "finalStr";
+            this.finalStr.Size = new System.Drawing.Size(0, 21);
+            this.finalStr.TabIndex = 15;
+            this.finalStr.Visible = false;
+            // 
+            // labelCompleteStat
+            // 
+            this.labelCompleteStat.AutoSize = true;
+            this.labelCompleteStat.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
+            this.labelCompleteStat.ForeColor = System.Drawing.Color.White;
+            this.labelCompleteStat.Location = new System.Drawing.Point(1185, 202);
+            this.labelCompleteStat.Name = "labelCompleteStat";
+            this.labelCompleteStat.Size = new System.Drawing.Size(133, 21);
+            this.labelCompleteStat.TabIndex = 21;
+            this.labelCompleteStat.Text = "Complete Stats";
+            this.labelCompleteStat.Visible = false;
             // 
             // tabPage1
             // 
@@ -227,8 +460,8 @@
             this.tabPage1.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage1.Size = new System.Drawing.Size(984, 584);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1015, 584);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Home";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -237,7 +470,7 @@
             // 
             this.buttonReturningPlayer.Font = new System.Drawing.Font("Lucida Calligraphy", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonReturningPlayer.Location = new System.Drawing.Point(609, 259);
-            this.buttonReturningPlayer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonReturningPlayer.Margin = new System.Windows.Forms.Padding(2);
             this.buttonReturningPlayer.Name = "buttonReturningPlayer";
             this.buttonReturningPlayer.Size = new System.Drawing.Size(166, 66);
             this.buttonReturningPlayer.TabIndex = 2;
@@ -284,7 +517,7 @@
             this.tabPage2.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.Location = new System.Drawing.Point(4, 26);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(984, 584);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Basic Information";
@@ -418,6 +651,19 @@
             this.tabPage3.Size = new System.Drawing.Size(984, 584);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Race";
+            // 
+            // buttonRaceSelected
+            // 
+            buttonRaceSelected.AutoSize = true;
+            buttonRaceSelected.BackColor = System.Drawing.Color.DarkSlateGray;
+            buttonRaceSelected.ForeColor = System.Drawing.Color.White;
+            buttonRaceSelected.Location = new System.Drawing.Point(842, 501);
+            buttonRaceSelected.Name = "buttonRaceSelected";
+            buttonRaceSelected.Size = new System.Drawing.Size(211, 44);
+            buttonRaceSelected.TabIndex = 10;
+            buttonRaceSelected.Text = "Race Selected";
+            buttonRaceSelected.UseVisualStyleBackColor = false;
+            buttonRaceSelected.Click += new System.EventHandler(this.buttonDone_Click);
             // 
             // labelPickRace
             // 
@@ -568,7 +814,7 @@
             this.tabPage4.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F);
             this.tabPage4.Location = new System.Drawing.Point(4, 26);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(984, 584);
+            this.tabPage4.Size = new System.Drawing.Size(1015, 584);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Role";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -782,7 +1028,7 @@
             this.tabPage5.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F);
             this.tabPage5.Location = new System.Drawing.Point(4, 26);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(984, 584);
+            this.tabPage5.Size = new System.Drawing.Size(1015, 584);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Points";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1052,7 +1298,7 @@
             this.tabPage6.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F);
             this.tabPage6.Location = new System.Drawing.Point(4, 26);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(984, 584);
+            this.tabPage6.Size = new System.Drawing.Size(1015, 584);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Background";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -1100,7 +1346,7 @@
             this.tabPage7.Controls.Add(this.labelRecap);
             this.tabPage7.Location = new System.Drawing.Point(4, 26);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(984, 584);
+            this.tabPage7.Size = new System.Drawing.Size(1015, 584);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Welcome!";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -1205,252 +1451,6 @@
             this.linkLabelRaces.TabStop = true;
             this.linkLabelRaces.Text = "Race Reference";
             this.linkLabelRaces.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRaces_LinkClicked);
-            // 
-            // buttonLastPage
-            // 
-            this.buttonLastPage.BackColor = System.Drawing.Color.White;
-            this.buttonLastPage.Location = new System.Drawing.Point(725, 632);
-            this.buttonLastPage.Name = "buttonLastPage";
-            this.buttonLastPage.Size = new System.Drawing.Size(52, 23);
-            this.buttonLastPage.TabIndex = 4;
-            this.buttonLastPage.Text = ">>";
-            this.buttonLastPage.UseVisualStyleBackColor = false;
-            this.buttonLastPage.Visible = false;
-            this.buttonLastPage.Click += new System.EventHandler(this.buttonLastPage_Click);
-            // 
-            // buttonNextPage
-            // 
-            this.buttonNextPage.BackColor = System.Drawing.Color.White;
-            this.buttonNextPage.Location = new System.Drawing.Point(625, 632);
-            this.buttonNextPage.Name = "buttonNextPage";
-            this.buttonNextPage.Size = new System.Drawing.Size(52, 23);
-            this.buttonNextPage.TabIndex = 3;
-            this.buttonNextPage.Text = ">";
-            this.buttonNextPage.UseVisualStyleBackColor = false;
-            this.buttonNextPage.Visible = false;
-            this.buttonNextPage.Click += new System.EventHandler(this.buttonNextPage_Click);
-            // 
-            // buttonHome
-            // 
-            this.buttonHome.BackColor = System.Drawing.Color.White;
-            this.buttonHome.Font = new System.Drawing.Font("Lucida Calligraphy", 9.75F);
-            this.buttonHome.Location = new System.Drawing.Point(502, 632);
-            this.buttonHome.Name = "buttonHome";
-            this.buttonHome.Size = new System.Drawing.Size(75, 23);
-            this.buttonHome.TabIndex = 2;
-            this.buttonHome.Text = "Home";
-            this.buttonHome.UseVisualStyleBackColor = false;
-            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
-            // 
-            // buttonPreviousPage
-            // 
-            this.buttonPreviousPage.BackColor = System.Drawing.Color.White;
-            this.buttonPreviousPage.Location = new System.Drawing.Point(402, 632);
-            this.buttonPreviousPage.Name = "buttonPreviousPage";
-            this.buttonPreviousPage.Size = new System.Drawing.Size(52, 23);
-            this.buttonPreviousPage.TabIndex = 1;
-            this.buttonPreviousPage.Text = "<";
-            this.buttonPreviousPage.UseVisualStyleBackColor = false;
-            this.buttonPreviousPage.Click += new System.EventHandler(this.buttonPreviousPage_Click);
-            // 
-            // buttonFirstPage
-            // 
-            this.buttonFirstPage.BackColor = System.Drawing.Color.White;
-            this.buttonFirstPage.Location = new System.Drawing.Point(302, 632);
-            this.buttonFirstPage.Name = "buttonFirstPage";
-            this.buttonFirstPage.Size = new System.Drawing.Size(52, 23);
-            this.buttonFirstPage.TabIndex = 0;
-            this.buttonFirstPage.Text = "<<";
-            this.buttonFirstPage.UseVisualStyleBackColor = false;
-            this.buttonFirstPage.Click += new System.EventHandler(this.buttonFirstPage_Click);
-            // 
-            // labelNameString
-            // 
-            this.labelNameString.AutoSize = true;
-            this.labelNameString.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
-            this.labelNameString.ForeColor = System.Drawing.Color.White;
-            this.labelNameString.Location = new System.Drawing.Point(1011, 87);
-            this.labelNameString.Name = "labelNameString";
-            this.labelNameString.Size = new System.Drawing.Size(0, 21);
-            this.labelNameString.TabIndex = 5;
-            this.labelNameString.Visible = false;
-            // 
-            // labelGenderString
-            // 
-            this.labelGenderString.AutoSize = true;
-            this.labelGenderString.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
-            this.labelGenderString.ForeColor = System.Drawing.Color.White;
-            this.labelGenderString.Location = new System.Drawing.Point(1011, 125);
-            this.labelGenderString.Name = "labelGenderString";
-            this.labelGenderString.Size = new System.Drawing.Size(0, 21);
-            this.labelGenderString.TabIndex = 6;
-            this.labelGenderString.Visible = false;
-            // 
-            // labelRaceString
-            // 
-            this.labelRaceString.AutoSize = true;
-            this.labelRaceString.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
-            this.labelRaceString.ForeColor = System.Drawing.Color.White;
-            this.labelRaceString.Location = new System.Drawing.Point(1011, 163);
-            this.labelRaceString.Name = "labelRaceString";
-            this.labelRaceString.Size = new System.Drawing.Size(0, 21);
-            this.labelRaceString.TabIndex = 7;
-            this.labelRaceString.Visible = false;
-            // 
-            // labelStrength
-            // 
-            this.labelStrength.AutoSize = true;
-            this.labelStrength.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
-            this.labelStrength.ForeColor = System.Drawing.Color.White;
-            this.labelStrength.Location = new System.Drawing.Point(1011, 252);
-            this.labelStrength.Name = "labelStrength";
-            this.labelStrength.Size = new System.Drawing.Size(0, 21);
-            this.labelStrength.TabIndex = 8;
-            this.labelStrength.Visible = false;
-            // 
-            // labelDexterity
-            // 
-            this.labelDexterity.AutoSize = true;
-            this.labelDexterity.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
-            this.labelDexterity.ForeColor = System.Drawing.Color.White;
-            this.labelDexterity.Location = new System.Drawing.Point(1011, 307);
-            this.labelDexterity.Name = "labelDexterity";
-            this.labelDexterity.Size = new System.Drawing.Size(0, 21);
-            this.labelDexterity.TabIndex = 9;
-            this.labelDexterity.Visible = false;
-            // 
-            // labelConstitution
-            // 
-            this.labelConstitution.AutoSize = true;
-            this.labelConstitution.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
-            this.labelConstitution.ForeColor = System.Drawing.Color.White;
-            this.labelConstitution.Location = new System.Drawing.Point(1011, 362);
-            this.labelConstitution.Name = "labelConstitution";
-            this.labelConstitution.Size = new System.Drawing.Size(0, 21);
-            this.labelConstitution.TabIndex = 10;
-            this.labelConstitution.Visible = false;
-            // 
-            // labelIntelligence
-            // 
-            this.labelIntelligence.AutoSize = true;
-            this.labelIntelligence.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
-            this.labelIntelligence.ForeColor = System.Drawing.Color.White;
-            this.labelIntelligence.Location = new System.Drawing.Point(1011, 527);
-            this.labelIntelligence.Name = "labelIntelligence";
-            this.labelIntelligence.Size = new System.Drawing.Size(0, 21);
-            this.labelIntelligence.TabIndex = 13;
-            this.labelIntelligence.Visible = false;
-            // 
-            // labelWisdom
-            // 
-            this.labelWisdom.AutoSize = true;
-            this.labelWisdom.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
-            this.labelWisdom.ForeColor = System.Drawing.Color.White;
-            this.labelWisdom.Location = new System.Drawing.Point(1011, 472);
-            this.labelWisdom.Name = "labelWisdom";
-            this.labelWisdom.Size = new System.Drawing.Size(0, 21);
-            this.labelWisdom.TabIndex = 12;
-            this.labelWisdom.Visible = false;
-            // 
-            // labelCharisma
-            // 
-            this.labelCharisma.AutoSize = true;
-            this.labelCharisma.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
-            this.labelCharisma.ForeColor = System.Drawing.Color.White;
-            this.labelCharisma.Location = new System.Drawing.Point(1011, 417);
-            this.labelCharisma.Name = "labelCharisma";
-            this.labelCharisma.Size = new System.Drawing.Size(0, 21);
-            this.labelCharisma.TabIndex = 11;
-            this.labelCharisma.Visible = false;
-            // 
-            // labelRoleString
-            // 
-            this.labelRoleString.AutoSize = true;
-            this.labelRoleString.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
-            this.labelRoleString.ForeColor = System.Drawing.Color.White;
-            this.labelRoleString.Location = new System.Drawing.Point(1011, 201);
-            this.labelRoleString.Name = "labelRoleString";
-            this.labelRoleString.Size = new System.Drawing.Size(0, 21);
-            this.labelRoleString.TabIndex = 14;
-            this.labelRoleString.Visible = false;
-            // 
-            // finalInt
-            // 
-            this.finalInt.AutoSize = true;
-            this.finalInt.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
-            this.finalInt.ForeColor = System.Drawing.Color.White;
-            this.finalInt.Location = new System.Drawing.Point(1214, 527);
-            this.finalInt.Name = "finalInt";
-            this.finalInt.Size = new System.Drawing.Size(0, 21);
-            this.finalInt.TabIndex = 20;
-            this.finalInt.Visible = false;
-            // 
-            // finalWis
-            // 
-            this.finalWis.AutoSize = true;
-            this.finalWis.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
-            this.finalWis.ForeColor = System.Drawing.Color.White;
-            this.finalWis.Location = new System.Drawing.Point(1214, 472);
-            this.finalWis.Name = "finalWis";
-            this.finalWis.Size = new System.Drawing.Size(0, 21);
-            this.finalWis.TabIndex = 19;
-            this.finalWis.Visible = false;
-            // 
-            // finalCha
-            // 
-            this.finalCha.AutoSize = true;
-            this.finalCha.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
-            this.finalCha.ForeColor = System.Drawing.Color.White;
-            this.finalCha.Location = new System.Drawing.Point(1214, 417);
-            this.finalCha.Name = "finalCha";
-            this.finalCha.Size = new System.Drawing.Size(0, 21);
-            this.finalCha.TabIndex = 18;
-            this.finalCha.Visible = false;
-            // 
-            // finalCon
-            // 
-            this.finalCon.AutoSize = true;
-            this.finalCon.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
-            this.finalCon.ForeColor = System.Drawing.Color.White;
-            this.finalCon.Location = new System.Drawing.Point(1214, 362);
-            this.finalCon.Name = "finalCon";
-            this.finalCon.Size = new System.Drawing.Size(0, 21);
-            this.finalCon.TabIndex = 17;
-            this.finalCon.Visible = false;
-            // 
-            // finalDex
-            // 
-            this.finalDex.AutoSize = true;
-            this.finalDex.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
-            this.finalDex.ForeColor = System.Drawing.Color.White;
-            this.finalDex.Location = new System.Drawing.Point(1214, 307);
-            this.finalDex.Name = "finalDex";
-            this.finalDex.Size = new System.Drawing.Size(0, 21);
-            this.finalDex.TabIndex = 16;
-            this.finalDex.Visible = false;
-            // 
-            // finalStr
-            // 
-            this.finalStr.AutoSize = true;
-            this.finalStr.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
-            this.finalStr.ForeColor = System.Drawing.Color.White;
-            this.finalStr.Location = new System.Drawing.Point(1214, 252);
-            this.finalStr.Name = "finalStr";
-            this.finalStr.Size = new System.Drawing.Size(0, 21);
-            this.finalStr.TabIndex = 15;
-            this.finalStr.Visible = false;
-            // 
-            // labelCompleteStat
-            // 
-            this.labelCompleteStat.AutoSize = true;
-            this.labelCompleteStat.Font = new System.Drawing.Font("Lucida Calligraphy", 12F);
-            this.labelCompleteStat.ForeColor = System.Drawing.Color.White;
-            this.labelCompleteStat.Location = new System.Drawing.Point(1185, 202);
-            this.labelCompleteStat.Name = "labelCompleteStat";
-            this.labelCompleteStat.Size = new System.Drawing.Size(133, 21);
-            this.labelCompleteStat.TabIndex = 21;
-            this.labelCompleteStat.Text = "Complete Stats";
-            this.labelCompleteStat.Visible = false;
             // 
             // Form1
             // 

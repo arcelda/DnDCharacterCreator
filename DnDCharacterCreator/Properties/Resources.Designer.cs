@@ -113,6 +113,16 @@ namespace DnDCharacterCreator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DnD_simple_sheet {
+            get {
+                object obj = ResourceManager.GetObject("DnD_simple_sheet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Dragonborn {
             get {
                 object obj = ResourceManager.GetObject("Dragonborn", resourceCulture);
