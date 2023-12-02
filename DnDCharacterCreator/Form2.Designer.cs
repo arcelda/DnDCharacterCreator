@@ -32,7 +32,6 @@ namespace DnDCharacterCreator
             this.buttonHome = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.characterSheetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchPlayersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,17 +66,10 @@ namespace DnDCharacterCreator
             // characterSheetToolStripMenuItem
             // 
             this.characterSheetToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewInfoToolStripMenuItem,
             this.editInfoToolStripMenuItem});
             this.characterSheetToolStripMenuItem.Name = "characterSheetToolStripMenuItem";
             this.characterSheetToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
             this.characterSheetToolStripMenuItem.Text = "Character Sheet";
-            // 
-            // viewInfoToolStripMenuItem
-            // 
-            this.viewInfoToolStripMenuItem.Name = "viewInfoToolStripMenuItem";
-            this.viewInfoToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-            this.viewInfoToolStripMenuItem.Text = "View Info";
             // 
             // editInfoToolStripMenuItem
             // 
@@ -97,13 +89,14 @@ namespace DnDCharacterCreator
             // searchPlayersToolStripMenuItem
             // 
             this.searchPlayersToolStripMenuItem.Name = "searchPlayersToolStripMenuItem";
-            this.searchPlayersToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.searchPlayersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.searchPlayersToolStripMenuItem.Text = "Search Players";
+            this.searchPlayersToolStripMenuItem.Click += new System.EventHandler(this.searchPlayersToolStripMenuItem_Click);
             // 
             // searchSessionsToolStripMenuItem
             // 
             this.searchSessionsToolStripMenuItem.Name = "searchSessionsToolStripMenuItem";
-            this.searchSessionsToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.searchSessionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.searchSessionsToolStripMenuItem.Text = "Search Sessions";
             // 
             // pictureBox1
@@ -142,7 +135,6 @@ namespace DnDCharacterCreator
         private System.Windows.Forms.Button buttonHome;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem characterSheetToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewInfoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editInfoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem searchPlayersToolStripMenuItem;

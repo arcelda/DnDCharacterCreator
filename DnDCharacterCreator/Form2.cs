@@ -23,5 +23,11 @@ namespace DnDCharacterCreator
             Form1 form = new Form1();
             form.Show();
         }
+
+        private void searchPlayersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchPlayer searchPlayer = new SearchPlayer();
+            searchPlayer.ShowDialog();
+        }
     }
 }

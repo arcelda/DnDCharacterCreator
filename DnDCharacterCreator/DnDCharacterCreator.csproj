@@ -117,6 +117,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SearchPlayer.resx">
+      <DependentUpon>SearchPlayer.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Dnd_DatabaseDataSet.xsc">
       <DependentUpon>Dnd_DatabaseDataSet.xsd</DependentUpon>
     </None>
