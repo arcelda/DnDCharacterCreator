@@ -46,5 +46,17 @@ namespace DnDCharacterCreator
             textBox_Password.Clear();
             textBox_Username.Focus();
         }
+
+        private void button_Exit_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Do you want to exit the form?", "Dnd Character Creator",
+                                                  MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+                Form1 form = new Form1();
+                form.ShowDialog();
+            }
+        }
     }
 }
