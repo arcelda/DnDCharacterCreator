@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
@@ -10,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+//using Microsoft.EntityFrameworkCore;
 
 namespace DnDCharacterCreator
 {
@@ -25,6 +27,7 @@ namespace DnDCharacterCreator
         string gender = "";
         string race = "";
         string role = "";
+        string password = "";
         const int MAX_POINTS = 28;
         const int BOOST_POINTS = 15;
         static int usedPoints = 0;
@@ -853,7 +856,8 @@ namespace DnDCharacterCreator
                         "\nCharisma:\t\t" + final_charisma +
                         "\nWisdom:\t\t\t" + final_wisdom +
                         "\nIntelligence:\t\t" + final_intelligence +
-                        "\nAbout me:\n" + textBoxSelfIntro.Text;
+                        "\nAbout me:\t\t" + textBoxSelfIntro.Text +
+                        "\nPassword:\t" + password;
 
             // Write to the file
             writeToFile.WriteLine(item);
@@ -864,7 +868,65 @@ namespace DnDCharacterCreator
 
             writeToFile.Close();
 
+            // append name and password to Logins.txt
+            StreamWriter stream;
+
+            stream = File.AppendText("Logins.txt");
+
+            stream.WriteLine(password + ","  + name);
+
+            MessageBox.Show("You have completed writing to Logins: " + "Logins",
+                mscaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            stream.Close();
+
+
+
+
+            try
+            {
+                // add ability to send to database table:
+                using (SqlConnection connection = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Dnd_Database.mdf;Integrated Security=True"))
+                {
+                    connection.Open();
+
+                    string insertQuery = "INSERT INTO CharacterTable (name, gender, race, role, strength, dexterity, constitution, charisma, wisdom, intelligence) " +
+                                 "VALUES (@Name, @Gender, @Race, @Role, @Strength, @Dexterity, @Constitution, @Charisma, @Wisdom, @Intelligence, @Password)";
+
+                    using (SqlCommand command = new SqlCommand(insertQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@Name", name);
+                        command.Parameters.AddWithValue("@Gender", gender);
+                        command.Parameters.AddWithValue("@Race", race);
+                        command.Parameters.AddWithValue("@Role", role);
+                        command.Parameters.AddWithValue("@Strength", final_strength);
+                        command.Parameters.AddWithValue("@Dexterity", final_dexterity);
+                        command.Parameters.AddWithValue("@Constitution", final_constitution);
+                        command.Parameters.AddWithValue("@Charisma", final_charisma);
+                        command.Parameters.AddWithValue("@Wisdom", final_wisdom);
+                        command.Parameters.AddWithValue("@Intelligence", final_intelligence);
+                        command.Parameters.AddWithValue("@Password", password);
+
+                        command.ExecuteNonQuery();
+
+                        MessageBox.Show("Character was added to the database!", mscaption,
+                                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while opening the database connection: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            
+
+
+
             nextPage();
+
+
+           
         }
 
         private void linkLabelRaces_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -884,6 +946,28 @@ namespace DnDCharacterCreator
             this.Hide();
             //formReturningPlayer.ShowDialog();
             loginPage.ShowDialog();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            DialogResult result = MessageBox.Show("Is this the password you want to save?", mscaption,
+                                                  MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                password = textBox_EnterPassword.Text;
+                nextPage();
+            }
+            else
+            {
+                textBox_EnterPassword.SelectAll();
+                textBox_EnterPassword.Focus();
+                return;
+            }
+            
+            
 
         }
 
