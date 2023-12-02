@@ -49,7 +49,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -92,6 +92,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchPlayer.Designer.cs">
+      <DependentUpon>SearchPlayer.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,6 +246,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Dnd_Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\DnD simple sheet.jpg" />
     <Content Include="Resources\Logins.txt" />
   </ItemGroup>
   <ItemGroup>
