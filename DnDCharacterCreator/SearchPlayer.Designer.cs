@@ -245,6 +245,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.characterTableDataGridView);
             this.Name = "SearchPlayer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "SearchPlayer";
             this.Load += new System.EventHandler(this.SearchPlayer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dnd_DatabaseDataSet1)).EndInit();
