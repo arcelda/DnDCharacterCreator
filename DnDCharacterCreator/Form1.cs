@@ -7,9 +7,12 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.WebRequestMethods;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 //using Microsoft.EntityFrameworkCore;
 
@@ -31,6 +34,7 @@ namespace DnDCharacterCreator
         const int MAX_POINTS = 28;
         const int BOOST_POINTS = 15;
         static int usedPoints = 0;
+        int level;
 
         PictureBox currentRace, currentRole;
 
@@ -831,13 +835,13 @@ namespace DnDCharacterCreator
             string filename = "DnDCharacter.txt";
             // check if file exists
             // if no, create text, if yes, append text
-            if (File.Exists(filename))
+            if (System.IO.File.Exists(filename))
             {
-                writeToFile = File.AppendText(filename);
+                writeToFile = System.IO.File.AppendText(filename);
             }
             else
             {
-                writeToFile = File.CreateText(filename);
+                writeToFile = System.IO.File.CreateText(filename);
             }
 
             // Write items to the file
@@ -847,6 +851,7 @@ namespace DnDCharacterCreator
 
             // Use looping to get each item and write to the file
             string item = "\nName:\t\t" + name +
+                        "\nLevel:\t\t" + level + 
                         "\nGender:\t\t" + gender +
                         "\nRace:\t\t" + race +
                         "\nRole:\t\t" + role +
@@ -871,27 +876,59 @@ namespace DnDCharacterCreator
             // append name and password to Logins.txt
             StreamWriter stream;
 
-            stream = File.AppendText("Logins.txt");
+            stream = System.IO.File.AppendText("Logins.txt");
 
             stream.WriteLine(password + ","  + name);
 
             MessageBox.Show("You have completed writing to Logins: " + "Logins",
-                mscaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+            mscaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
             stream.Close();
 
+            //string connectionString = "Data Source =(LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\erick\\Downloads\\Dnd_Database.mdf; Integrated Security = True; Connect Timeout = 30; Context Connection = False";
+
+            //SqlConnection connection = new SqlConnection(connectionString: "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\erick\\Downloads\\Dnd_Database.mdf; Integrated Security = True; Connect Timeout = 30; Context Connection = False");
+
+            //connection.Open();
+
+            System.Data.SqlClient.SqlConnection sqlConnection1 =
+            new System.Data.SqlClient.SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\erick\\source\\repos\\arcelda\\DnDCharacterCreator\\12-2-23\\DnDCharacterCreator\\Dnd_Database.mdf;Integrated Security=True");
+
+            System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "INSERT INTO CharacterTable (Name, Gender, Race, Role, Level, Strength, Dexterity, Constitution, Charisma, Wisdom, Intelligence, Password) " +
+                  "VALUES (@Name, @Gender, @Race, @Role, @Level, @Strength, @Dexterity, @Constitution, @Charisma, @Wisdom, @Intelligence, @Password)";
+            cmd.Connection = sqlConnection1;
+
+            sqlConnection1.Open();
 
 
+            cmd.Parameters.AddWithValue("@Name", name);
+            cmd.Parameters.AddWithValue("@Gender", gender);
+            cmd.Parameters.AddWithValue("@Race", race);
+            cmd.Parameters.AddWithValue("@Role", role);
+            cmd.Parameters.AddWithValue("@Level", level);
+            cmd.Parameters.AddWithValue("@Strength", final_strength);
+            cmd.Parameters.AddWithValue("@Dexterity", final_dexterity);
+            cmd.Parameters.AddWithValue("@Constitution", final_constitution);
+            cmd.Parameters.AddWithValue("@Charisma", final_charisma);
+            cmd.Parameters.AddWithValue("@Wisdom", final_wisdom);
+            cmd.Parameters.AddWithValue("@Intelligence", final_intelligence);
+            cmd.Parameters.AddWithValue("@Password", password);
 
-            try
+            cmd.ExecuteNonQuery();
+            sqlConnection1.Close();
+
+ 
+
+
+            /*try
             {
                 // add ability to send to database table:
-                using (SqlConnection connection = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Dnd_Database.mdf;Integrated Security=True"))
-                {
-                    connection.Open();
+                
+                    
 
-                    string insertQuery = "INSERT INTO CharacterTable (name, gender, race, role, strength, dexterity, constitution, charisma, wisdom, intelligence) " +
-                                 "VALUES (@Name, @Gender, @Race, @Role, @Strength, @Dexterity, @Constitution, @Charisma, @Wisdom, @Intelligence, @Password)";
+                    string insertQuery = "INSERT INTO CharacterTable (name, level, gender, race, role, strength, dexterity, constitution, charisma, wisdom, intelligence) " +
+                                 "VALUES (@Name, @Level, @Gender, @Race, @Role, @Strength, @Dexterity, @Constitution, @Charisma, @Wisdom, @Intelligence, @Password)";
 
                     using (SqlCommand command = new SqlCommand(insertQuery, connection))
                     {
@@ -899,6 +936,7 @@ namespace DnDCharacterCreator
                         command.Parameters.AddWithValue("@Gender", gender);
                         command.Parameters.AddWithValue("@Race", race);
                         command.Parameters.AddWithValue("@Role", role);
+                        command.Parameters.AddWithValue("@Level", level);
                         command.Parameters.AddWithValue("@Strength", final_strength);
                         command.Parameters.AddWithValue("@Dexterity", final_dexterity);
                         command.Parameters.AddWithValue("@Constitution", final_constitution);
@@ -912,14 +950,19 @@ namespace DnDCharacterCreator
                         MessageBox.Show("Character was added to the database!", mscaption,
                                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
-                }
+                
             }
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred while opening the database connection: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            } 
+            finally
+            {
+                if (connection.State != ConnectionState.Closed)
+                    connection.Close();
+            } */
 
-            
+
 
 
 
@@ -971,6 +1014,21 @@ namespace DnDCharacterCreator
 
         }
 
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_Level_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void buttonMinusWisdom_Click(object sender, EventArgs e)
         {
             if (usedPoints > 0 && alloted_wisdom - 1 != -1)
@@ -1000,6 +1058,14 @@ namespace DnDCharacterCreator
 
         private void buttonFinalize_Click(object sender, EventArgs e)
         {
+
+            int input = int.Parse(textBox_Level.Text);
+
+            if (input >= 1 &&  input <= 3)
+            {
+                level = input;
+            }
+
             if(usedPoints < MAX_POINTS)
             {
                 DialogResult continueYN = MessageBox.Show("You still have points to allocate." +

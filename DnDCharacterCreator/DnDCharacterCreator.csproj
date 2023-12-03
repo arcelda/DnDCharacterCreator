@@ -63,13 +63,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dnd_DatabaseDataSet.cs">
-      <DependentUpon>Dnd_DatabaseDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Dnd_DatabaseDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Dnd_DatabaseDataSet.xsd</DependentUpon>
+    <Compile Include="Dnd_DatabaseDataSet1.cs">
+      <DependentUpon>Dnd_DatabaseDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Dnd_DatabaseDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -125,17 +120,6 @@
     <EmbeddedResource Include="SearchPlayer.resx">
       <DependentUpon>SearchPlayer.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Dnd_DatabaseDataSet.xsc">
-      <DependentUpon>Dnd_DatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Dnd_DatabaseDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Dnd_DatabaseDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Dnd_DatabaseDataSet.xss">
-      <DependentUpon>Dnd_DatabaseDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Dnd_DatabaseDataSet1.xsc">
       <DependentUpon>Dnd_DatabaseDataSet1.xsd</DependentUpon>
     </None>
@@ -259,10 +243,10 @@
   <ItemGroup>
     <Content Include="bin\Debug\Logins.txt" />
     <Content Include="Dnd_Database.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Dnd_Database_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Dnd_Database.mdf</DependentUpon>
     </Content>
     <None Include="Resources\DnD simple sheet.jpg" />
