@@ -22,7 +22,7 @@ namespace DnDCharacterCreator
 
         private void buttonHome_Click(object sender, EventArgs e)
         {
-            DialogResult exitYN = MessageBox.Show("Are you sure you want to exit", "Exit",
+            DialogResult exitYN = MessageBox.Show("Are you sure you want to exit?", "Exit",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
            
             if(exitYN == DialogResult.Yes)
