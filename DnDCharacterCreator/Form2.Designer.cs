@@ -37,7 +37,6 @@ namespace DnDCharacterCreator
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchPlayersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchSessionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.characterTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dnd_DatabaseDataSet1 = new DnDCharacterCreator.Dnd_DatabaseDataSet1();
             this.characterTableTableAdapter = new DnDCharacterCreator.Dnd_DatabaseDataSet1TableAdapters.CharacterTableTableAdapter();
@@ -53,18 +52,20 @@ namespace DnDCharacterCreator
             this.intelligenceTextBox = new System.Windows.Forms.TextBox();
             this.wisdomTextBox = new System.Windows.Forms.TextBox();
             this.charismaTextBox = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.characterTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dnd_DatabaseDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonHome
             // 
-            this.buttonHome.Location = new System.Drawing.Point(446, 492);
+            this.buttonHome.Font = new System.Drawing.Font("Lucida Calligraphy", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonHome.Location = new System.Drawing.Point(443, 492);
             this.buttonHome.Margin = new System.Windows.Forms.Padding(2);
             this.buttonHome.Name = "buttonHome";
-            this.buttonHome.Size = new System.Drawing.Size(60, 38);
+            this.buttonHome.Size = new System.Drawing.Size(102, 38);
             this.buttonHome.TabIndex = 0;
             this.buttonHome.Text = "Return to Home";
             this.buttonHome.UseVisualStyleBackColor = true;
@@ -93,8 +94,9 @@ namespace DnDCharacterCreator
             // 
             // editInfoToolStripMenuItem
             // 
+            this.editInfoToolStripMenuItem.Enabled = false;
             this.editInfoToolStripMenuItem.Name = "editInfoToolStripMenuItem";
-            this.editInfoToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.editInfoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editInfoToolStripMenuItem.Text = "Edit Info";
             // 
             // searchToolStripMenuItem
@@ -119,21 +121,6 @@ namespace DnDCharacterCreator
             this.searchSessionsToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.searchSessionsToolStripMenuItem.Text = "Search Sessions";
             this.searchSessionsToolStripMenuItem.Click += new System.EventHandler(this.searchSessionsToolStripMenuItem_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::DnDCharacterCreator.Properties.Resources.DnD_simple_sheet;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.characterTableBindingSource, "name", true));
-            this.pictureBox1.Enabled = false;
-            this.pictureBox1.Image = global::DnDCharacterCreator.Properties.Resources.DnD_simple_sheet;
-            this.pictureBox1.Location = new System.Drawing.Point(32, 51);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(622, 436);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // characterTableBindingSource
             // 
@@ -254,10 +241,27 @@ namespace DnDCharacterCreator
             this.charismaTextBox.Size = new System.Drawing.Size(24, 20);
             this.charismaTextBox.TabIndex = 28;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::DnDCharacterCreator.Properties.Resources.DnD_simple_sheet;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.characterTableBindingSource, "name", true));
+            this.pictureBox1.Enabled = false;
+            this.pictureBox1.Image = global::DnDCharacterCreator.Properties.Resources.DnD_simple_sheet;
+            this.pictureBox1.Location = new System.Drawing.Point(32, 51);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(622, 436);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormReturningPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::DnDCharacterCreator.Properties.Resources.ch2fkon;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(988, 550);
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.levelTextBox);
@@ -273,6 +277,7 @@ namespace DnDCharacterCreator
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonHome);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormReturningPlayer";
@@ -281,9 +286,9 @@ namespace DnDCharacterCreator
             this.Load += new System.EventHandler(this.FormReturningPlayer_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.characterTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dnd_DatabaseDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

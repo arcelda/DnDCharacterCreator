@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,9 +22,17 @@ namespace DnDCharacterCreator
 
         private void buttonHome_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Form1 form = new Form1();
-            form.Show();
+            DialogResult exitYN = MessageBox.Show("Are you sure you want to exit", "Exit",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+           
+            if(exitYN == DialogResult.Yes)
+            {
+                ResetPage();
+                this.Close();
+                Form1 form = new Form1();
+                form.Show();
+            }
+                
         }
 
         private void searchPlayersToolStripMenuItem_Click(object sender, EventArgs e)
@@ -42,6 +51,7 @@ namespace DnDCharacterCreator
         {
             // TODO: This line of code loads data into the 'dnd_DatabaseDataSet1.CharacterTable' table. You can move, or remove it, as needed.
             this.characterTableTableAdapter.Fill(this.dnd_DatabaseDataSet1.CharacterTable);
+            ResetPage();
 
             nameTextBox.Text = name;
 
@@ -67,6 +77,21 @@ namespace DnDCharacterCreator
             intelligenceTextBox.Text = dnd_DatabaseDataSet1.CharacterTable.Rows[index]["intelligence"].ToString();
             wisdomTextBox.Text = dnd_DatabaseDataSet1.CharacterTable.Rows[index]["wisdom"].ToString();
             charismaTextBox.Text = dnd_DatabaseDataSet1.CharacterTable.Rows[index]["charisma"].ToString();
+        }
+
+        private void ResetPage()
+        {
+            nameTextBox.Text = string.Empty;
+            levelTextBox.Text = string.Empty;
+            genderTextBox.Text = string.Empty;
+            raceTextBox.Text = string.Empty;
+            roleTextBox.Text = string.Empty;
+            strengthTextBox.Text = string.Empty;
+            dexterityTextBox.Text = string.Empty;
+            constitutionTextBox.Text = string.Empty;
+            intelligenceTextBox.Text = string.Empty;
+            wisdomTextBox.Text = string.Empty;
+            charismaTextBox.Text = string.Empty;
         }
 
 

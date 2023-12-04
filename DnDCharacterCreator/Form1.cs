@@ -1041,21 +1041,6 @@ namespace DnDCharacterCreator
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox_Level_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonMinusWisdom_Click(object sender, EventArgs e)
         {
             if (usedPoints > 0 && alloted_wisdom - 1 != -1)

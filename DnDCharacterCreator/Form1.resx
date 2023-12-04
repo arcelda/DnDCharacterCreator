@@ -20700,6 +20700,88 @@
         +g3Zvxz6ntf+zs/fJt+E3QhE4/7g/rX+5n96/Tmf1M/66v8A90//2Q==
 </value>
   </data>
+  <metadata name="toolTipTiefling.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>784, 3</value>
+  </metadata>
+  <data name="pictureTiefling.ToolTip" xml:space="preserve">
+    <value>Tiefling
+
+Tieflings are derived from human bloodlines, but infused 
+with the essence of Asmodeus—overlord of the Nine Hells
+and in the broadest possible sense, they still look human. 
+
+Racial Traits
++2 Charisma, +1 Intelligence</value>
+  </data>
+  <metadata name="toolTipHuman.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1046, 3</value>
+  </metadata>
+  <data name="pictureHuman.ToolTip" xml:space="preserve">
+    <value>Human
+
+Humans are the most adaptable and ambitious people among the 
+common races. They have widely varying tastes, morals, and 
+customs in the many different lands where they have settled.
+
+Racial Traits
++1 to All Ability Scores
+</value>
+  </data>
+  <metadata name="toolTipHalfling.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>914, 3</value>
+  </metadata>
+  <data name="pictureHalfling.ToolTip" xml:space="preserve">
+    <value>Halfling
+
+The diminutive halflings survive in a world full of larger creatures by 
+avoiding notice or, barring that, avoiding offense. Standing about 3 feet tall, 
+they appear relatively harmless and so have managed to survive for centuries 
+in the shadow of empires and on the edges of wars and political strife.
+
+Racial Traits
++2 Dexterity</value>
+  </data>
+  <metadata name="toolTipDwarf.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>173, 3</value>
+  </metadata>
+  <metadata name="toolTipElf.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>295, 3</value>
+  </metadata>
+  <metadata name="toolTipGnome.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>654, 3</value>
+  </metadata>
+  <data name="pictureGnome.ToolTip" xml:space="preserve">
+    <value>Gnome
+
+Gnomes average slightly over 3 feet tall and weigh 40 to 45 pounds. 
+Their tan or brown faces are usually adorned with broad smiles 
+(beneath their prodigious noses), and their bright eyes shine with excitement.
+
+Racial Traits
++2 Intelligence
+</value>
+  </data>
+  <metadata name="toolTipHalfElf.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>398, 3</value>
+  </metadata>
+  <metadata name="toolTipHalfOrc.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>523, 3</value>
+  </metadata>
+  <data name="pictureHalfOrc.ToolTip" xml:space="preserve">
+    <value>Half-Orc
+
+Half-orcs exhibit a blend of orcish and human characteristics, 
+and their appearance varies widely. Grayish skin tones and 
+prominent teeth are the most common shared elements 
+among these folk.
+
+Racial Traits
++2 Strength, +1 Constitution
+</value>
+  </data>
+  <metadata name="toolTipDragonborn.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 3</value>
+  </metadata>
   <data name="tabPage4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/4QCqRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAZKG
@@ -24760,6 +24842,42 @@
         IZiMyS0v1FPuUleokYtkwZeU6n3P/9k=
 </value>
   </data>
+  <metadata name="toolTipWizard.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 37</value>
+  </metadata>
+  <metadata name="toolTipPaladin.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>653, 42</value>
+  </metadata>
+  <metadata name="toolTipMonk.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>532, 42</value>
+  </metadata>
+  <metadata name="toolTipWarlock.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 37</value>
+  </metadata>
+  <metadata name="toolTipSorcerer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 37</value>
+  </metadata>
+  <metadata name="toolTipFighter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>404, 42</value>
+  </metadata>
+  <metadata name="toolTipRanger.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1018, 42</value>
+  </metadata>
+  <metadata name="toolTipCleric.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>284, 42</value>
+  </metadata>
+  <metadata name="toolTipBard.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>903, 42</value>
+  </metadata>
+  <metadata name="toolTipRogue.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>159, 42</value>
+  </metadata>
+  <metadata name="toolTipDruid.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>783, 42</value>
+  </metadata>
+  <metadata name="toolTipBarbarian.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 42</value>
+  </metadata>
   <data name="tabPage5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwg
@@ -41689,187 +41807,6 @@
         LegHzENl0/6EsxA7OnjCIEU1Vu//AOGy/wD/2Q==
 </value>
   </data>
-  <metadata name="toolTipTiefling.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>784, 3</value>
-  </metadata>
-  <data name="pictureTiefling.ToolTip" xml:space="preserve">
-    <value>Tiefling
-
-Tieflings are derived from human bloodlines, but infused 
-with the essence of Asmodeus—overlord of the Nine Hells
-and in the broadest possible sense, they still look human. 
-
-Racial Traits
-+2 Charisma, +1 Intelligence</value>
-  </data>
-  <metadata name="toolTipHuman.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1046, 3</value>
-  </metadata>
-  <data name="pictureHuman.ToolTip" xml:space="preserve">
-    <value>Human
-
-Humans are the most adaptable and ambitious people among the 
-common races. They have widely varying tastes, morals, and 
-customs in the many different lands where they have settled.
-
-Racial Traits
-+1 to All Ability Scores
-</value>
-  </data>
-  <metadata name="toolTipHalfling.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>914, 3</value>
-  </metadata>
-  <data name="pictureHalfling.ToolTip" xml:space="preserve">
-    <value>Halfling
-
-The diminutive halflings survive in a world full of larger creatures by 
-avoiding notice or, barring that, avoiding offense. Standing about 3 feet tall, 
-they appear relatively harmless and so have managed to survive for centuries 
-in the shadow of empires and on the edges of wars and political strife.
-
-Racial Traits
-+2 Dexterity</value>
-  </data>
-  <metadata name="toolTipDwarf.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>173, 3</value>
-  </metadata>
-  <metadata name="toolTipElf.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>295, 3</value>
-  </metadata>
-  <metadata name="toolTipGnome.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>654, 3</value>
-  </metadata>
-  <data name="pictureGnome.ToolTip" xml:space="preserve">
-    <value>Gnome
-
-Gnomes average slightly over 3 feet tall and weigh 40 to 45 pounds. 
-Their tan or brown faces are usually adorned with broad smiles 
-(beneath their prodigious noses), and their bright eyes shine with excitement.
-
-Racial Traits
-+2 Intelligence
-</value>
-  </data>
-  <metadata name="toolTipHalfElf.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>398, 3</value>
-  </metadata>
-  <metadata name="toolTipHalfOrc.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>523, 3</value>
-  </metadata>
-  <data name="pictureHalfOrc.ToolTip" xml:space="preserve">
-    <value>Half-Orc
-
-Half-orcs exhibit a blend of orcish and human characteristics, 
-and their appearance varies widely. Grayish skin tones and 
-prominent teeth are the most common shared elements 
-among these folk.
-
-Racial Traits
-+2 Strength, +1 Constitution
-</value>
-  </data>
-  <metadata name="toolTipDragonborn.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 3</value>
-  </metadata>
-  <metadata name="toolTipWizard.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 37</value>
-  </metadata>
-  <metadata name="toolTipPaladin.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>653, 42</value>
-  </metadata>
-  <metadata name="toolTipMonk.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>532, 42</value>
-  </metadata>
-  <metadata name="toolTipWarlock.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 37</value>
-  </metadata>
-  <metadata name="toolTipSorcerer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 37</value>
-  </metadata>
-  <metadata name="toolTipFighter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>404, 42</value>
-  </metadata>
-  <metadata name="toolTipRanger.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1018, 42</value>
-  </metadata>
-  <metadata name="toolTipCleric.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>284, 42</value>
-  </metadata>
-  <metadata name="toolTipBard.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>903, 42</value>
-  </metadata>
-  <metadata name="toolTipRogue.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>159, 42</value>
-  </metadata>
-  <metadata name="toolTipDruid.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>783, 42</value>
-  </metadata>
-  <metadata name="toolTipBarbarian.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 42</value>
-  </metadata>
-  <metadata name="toolTipDragonborn.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 3</value>
-  </metadata>
-  <metadata name="toolTipDwarf.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>173, 3</value>
-  </metadata>
-  <metadata name="toolTipElf.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>295, 3</value>
-  </metadata>
-  <metadata name="toolTipHalfElf.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>398, 3</value>
-  </metadata>
-  <metadata name="toolTipHalfOrc.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>523, 3</value>
-  </metadata>
-  <metadata name="toolTipGnome.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>654, 3</value>
-  </metadata>
-  <metadata name="toolTipTiefling.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>784, 3</value>
-  </metadata>
-  <metadata name="toolTipHalfling.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>914, 3</value>
-  </metadata>
-  <metadata name="toolTipHuman.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1046, 3</value>
-  </metadata>
-  <metadata name="toolTipBarbarian.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 42</value>
-  </metadata>
-  <metadata name="toolTipRogue.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>159, 42</value>
-  </metadata>
-  <metadata name="toolTipCleric.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>284, 42</value>
-  </metadata>
-  <metadata name="toolTipFighter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>404, 42</value>
-  </metadata>
-  <metadata name="toolTipMonk.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>532, 42</value>
-  </metadata>
-  <metadata name="toolTipPaladin.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>653, 42</value>
-  </metadata>
-  <metadata name="toolTipDruid.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>783, 42</value>
-  </metadata>
-  <metadata name="toolTipBard.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>903, 42</value>
-  </metadata>
-  <metadata name="toolTipRanger.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1018, 42</value>
-  </metadata>
-  <metadata name="toolTipSorcerer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 37</value>
-  </metadata>
-  <metadata name="toolTipWarlock.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 37</value>
-  </metadata>
-  <metadata name="toolTipWizard.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 37</value>
-  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>
