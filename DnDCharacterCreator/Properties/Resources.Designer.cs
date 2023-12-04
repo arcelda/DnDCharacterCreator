@@ -103,6 +103,16 @@ namespace DnDCharacterCreator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ch2fkon {
+            get {
+                object obj = ResourceManager.GetObject("ch2fkon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cleric {
             get {
                 object obj = ResourceManager.GetObject("Cleric", resourceCulture);

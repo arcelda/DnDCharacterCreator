@@ -127,6 +127,9 @@
   <data name="bg_f8f8f8_flat_750x_075_f_pad_750x1000_f8f8f8" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ch2fkon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ch2fkon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Cleric" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cleric.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

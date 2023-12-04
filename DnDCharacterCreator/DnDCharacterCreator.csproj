@@ -275,6 +275,7 @@
       <DependentUpon>Dnd_Database.mdf</DependentUpon>
     </Content>
     <None Include="Resources\DnD simple sheet.jpg" />
+    <None Include="Resources\ch2fkon.jpg" />
     <Content Include="Resources\Logins.txt" />
   </ItemGroup>
   <ItemGroup>
