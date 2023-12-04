@@ -43,10 +43,10 @@ namespace DnDCharacterCreator
             // 
             // buttonHome
             // 
-            this.buttonHome.Location = new System.Drawing.Point(446, 492);
-            this.buttonHome.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonHome.Location = new System.Drawing.Point(595, 606);
+            this.buttonHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonHome.Name = "buttonHome";
-            this.buttonHome.Size = new System.Drawing.Size(60, 38);
+            this.buttonHome.Size = new System.Drawing.Size(80, 47);
             this.buttonHome.TabIndex = 0;
             this.buttonHome.Text = "Return to Home";
             this.buttonHome.UseVisualStyleBackColor = true;
@@ -54,12 +54,13 @@ namespace DnDCharacterCreator
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.characterSheetToolStripMenuItem,
             this.searchToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(979, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1305, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -68,14 +69,13 @@ namespace DnDCharacterCreator
             this.characterSheetToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editInfoToolStripMenuItem});
             this.characterSheetToolStripMenuItem.Name = "characterSheetToolStripMenuItem";
-            this.characterSheetToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
+            this.characterSheetToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
             this.characterSheetToolStripMenuItem.Text = "Character Sheet";
             // 
-
             // editInfoToolStripMenuItem
             // 
             this.editInfoToolStripMenuItem.Name = "editInfoToolStripMenuItem";
-            this.editInfoToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.editInfoToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
             this.editInfoToolStripMenuItem.Text = "Edit Info";
             // 
             // searchToolStripMenuItem
@@ -84,42 +84,44 @@ namespace DnDCharacterCreator
             this.searchPlayersToolStripMenuItem,
             this.searchSessionsToolStripMenuItem});
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
             this.searchToolStripMenuItem.Text = "Search";
             // 
             // searchPlayersToolStripMenuItem
             // 
             this.searchPlayersToolStripMenuItem.Name = "searchPlayersToolStripMenuItem";
-            this.searchPlayersToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.searchPlayersToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.searchPlayersToolStripMenuItem.Text = "Search Players";
             this.searchPlayersToolStripMenuItem.Click += new System.EventHandler(this.searchPlayersToolStripMenuItem_Click);
             // 
             // searchSessionsToolStripMenuItem
             // 
             this.searchSessionsToolStripMenuItem.Name = "searchSessionsToolStripMenuItem";
-            this.searchSessionsToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.searchSessionsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.searchSessionsToolStripMenuItem.Text = "Search Sessions";
+            this.searchSessionsToolStripMenuItem.Click += new System.EventHandler(this.searchSessionsToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DnDCharacterCreator.Properties.Resources.DnD_simple_sheet;
-            this.pictureBox1.Location = new System.Drawing.Point(32, 51);
+            this.pictureBox1.Location = new System.Drawing.Point(43, 63);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(622, 436);
+            this.pictureBox1.Size = new System.Drawing.Size(829, 537);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // FormReturningPlayer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(979, 541);
+            this.ClientSize = new System.Drawing.Size(1305, 666);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonHome);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormReturningPlayer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Welcome Back";

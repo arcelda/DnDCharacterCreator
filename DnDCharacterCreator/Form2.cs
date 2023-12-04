@@ -29,5 +29,11 @@ namespace DnDCharacterCreator
             SearchPlayer searchPlayer = new SearchPlayer();
             searchPlayer.ShowDialog();
         }
+
+        private void searchSessionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchSession searchSession = new SearchSession();
+            searchSession.ShowDialog();
+        }
     }
 }

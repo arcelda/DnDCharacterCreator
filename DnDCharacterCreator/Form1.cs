@@ -895,13 +895,13 @@ namespace DnDCharacterCreator
 
             System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = "INSERT INTO CharacterTable (Name, Gender, Race, Role, Level, Strength, Dexterity, Constitution, Charisma, Wisdom, Intelligence, Password) " +
-                  "VALUES (@Name, @Gender, @Race, @Role, @Level, @Strength, @Dexterity, @Constitution, @Charisma, @Wisdom, @Intelligence, @Password)";
+            cmd.CommandText = "INSERT INTO CharacterTable (character_ID, Name, Gender, Race, Role, Level, Strength, Dexterity, Constitution, Charisma, Wisdom, Intelligence, Password) " +
+                  "VALUES ((SELECT ISNULL(MAX(character_ID), 0) + 1 FROM CharacterTable), @Name, @Gender, @Race, @Role, @Level, @Strength, @Dexterity, @Constitution, @Charisma, @Wisdom, @Intelligence, @Password)";
             cmd.Connection = sqlConnection1;
 
             sqlConnection1.Open();
 
-
+            cmd.Parameters.AddWithValue("@character_ID", 1);
             cmd.Parameters.AddWithValue("@Name", name);
             cmd.Parameters.AddWithValue("@Gender", gender);
             cmd.Parameters.AddWithValue("@Race", race);
@@ -916,9 +916,36 @@ namespace DnDCharacterCreator
             cmd.Parameters.AddWithValue("@Password", password);
 
             cmd.ExecuteNonQuery();
+
+            // Retrieve the character_ID that was just inserted
+            cmd.CommandText = "SELECT COALESCE(SCOPE_IDENTITY(), 0)";
+            int characterID = Convert.ToInt32(cmd.ExecuteScalar());
+
             sqlConnection1.Close();
 
- 
+            
+
+
+            // for session table
+            System.Data.SqlClient.SqlConnection sqlConnection2 =
+            new System.Data.SqlClient.SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\erick\\source\\repos\\arcelda\\DnDCharacterCreator\\12-2-23\\DnDCharacterCreator\\Dnd_Database.mdf;Integrated Security=True");
+
+            System.Data.SqlClient.SqlCommand cmd2 = new System.Data.SqlClient.SqlCommand();
+            cmd2.CommandType = System.Data.CommandType.Text;
+            cmd2.CommandText = "INSERT INTO SessionTable (session_ID, Name, Notes) " +
+                   "VALUES ((SELECT ISNULL(MAX(session_ID), 0) + 1 FROM SessionTable), @Name, @Notes)";
+            cmd2.Connection = sqlConnection2;
+
+            sqlConnection2.Open();
+
+            cmd2.Parameters.AddWithValue("@Name", name);  
+            cmd2.Parameters.AddWithValue("@Notes", aboutMe);
+            //cmd2.Parameters.AddWithValue("@CharacterID", characterID);
+
+            cmd2.ExecuteNonQuery();
+            sqlConnection2.Close();
+
+
 
 
             /*try
