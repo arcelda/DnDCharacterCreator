@@ -17,6 +17,8 @@ namespace DnDCharacterCreator
             InitializeComponent();
         }
 
+        public string name;
+
         private void buttonHome_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -35,5 +37,38 @@ namespace DnDCharacterCreator
             SearchSession searchSession = new SearchSession();
             searchSession.ShowDialog();
         }
+
+        private void FormReturningPlayer_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dnd_DatabaseDataSet1.CharacterTable' table. You can move, or remove it, as needed.
+            this.characterTableTableAdapter.Fill(this.dnd_DatabaseDataSet1.CharacterTable);
+
+            nameTextBox.Text = name;
+
+            int index = 0;
+
+            for(int i = 0; i < dnd_DatabaseDataSet1.CharacterTable.nameColumn.Table.Rows.Count - 1; i++)
+            {
+                if(name == dnd_DatabaseDataSet1.CharacterTable.Rows[i]["name"].ToString())
+                {
+                    index = i;
+                    break;
+                }
+            }
+
+            //levelTextBox.Text = dnd_DatabaseDataSet1.CharacterTable.levelColumn.Table.Rows[index].ToString();
+            levelTextBox.Text = dnd_DatabaseDataSet1.CharacterTable.Rows[index]["level"].ToString();
+            genderTextBox.Text = dnd_DatabaseDataSet1.CharacterTable.Rows[index]["gender"].ToString();
+            raceTextBox.Text = dnd_DatabaseDataSet1.CharacterTable.Rows[index]["race"].ToString();
+            roleTextBox.Text = dnd_DatabaseDataSet1.CharacterTable.Rows[index]["role"].ToString();
+            strengthTextBox.Text = dnd_DatabaseDataSet1.CharacterTable.Rows[index]["strength"].ToString();
+            dexterityTextBox.Text = dnd_DatabaseDataSet1.CharacterTable.Rows[index]["dexterity"].ToString();
+            constitutionTextBox.Text = dnd_DatabaseDataSet1.CharacterTable.Rows[index]["constitution"].ToString();
+            intelligenceTextBox.Text = dnd_DatabaseDataSet1.CharacterTable.Rows[index]["intelligence"].ToString();
+            wisdomTextBox.Text = dnd_DatabaseDataSet1.CharacterTable.Rows[index]["wisdom"].ToString();
+            charismaTextBox.Text = dnd_DatabaseDataSet1.CharacterTable.Rows[index]["charisma"].ToString();
+        }
+
+
     }
 }

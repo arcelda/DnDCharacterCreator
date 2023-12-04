@@ -28,6 +28,7 @@ namespace DnDCharacterCreator
             if (logins.Check())
             {
                 FormReturningPlayer formReturningPlayer = new FormReturningPlayer();
+                formReturningPlayer.name = textBox_Username.Text;
                 this.Hide();
                 formReturningPlayer.ShowDialog();
             }

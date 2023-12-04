@@ -24,9 +24,6 @@ namespace DnDCharacterCreator
 
         }
 
-
-        
-
         private void fillBySessionToolStripButton_Click(object sender, EventArgs e)
         {
             try
