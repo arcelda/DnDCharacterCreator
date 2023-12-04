@@ -901,7 +901,11 @@ namespace DnDCharacterCreator
 
             sqlConnection1.Open();
 
-            cmd.Parameters.AddWithValue("@character_ID", 1);
+            cmd.CommandText = "SELECT COALESCE(SCOPE_IDENTITY(), 0)";
+            int characterID = Convert.ToInt32(cmd.ExecuteScalar());
+
+
+            cmd.Parameters.AddWithValue("@character_ID", characterID);
             cmd.Parameters.AddWithValue("@Name", name);
             cmd.Parameters.AddWithValue("@Gender", gender);
             cmd.Parameters.AddWithValue("@Race", race);
@@ -917,9 +921,7 @@ namespace DnDCharacterCreator
 
             cmd.ExecuteNonQuery();
 
-            // Retrieve the character_ID that was just inserted
-            cmd.CommandText = "SELECT COALESCE(SCOPE_IDENTITY(), 0)";
-            int characterID = Convert.ToInt32(cmd.ExecuteScalar());
+           
 
             sqlConnection1.Close();
 
@@ -932,66 +934,20 @@ namespace DnDCharacterCreator
 
             System.Data.SqlClient.SqlCommand cmd2 = new System.Data.SqlClient.SqlCommand();
             cmd2.CommandType = System.Data.CommandType.Text;
-            cmd2.CommandText = "INSERT INTO SessionTable (session_ID, Name, Notes) " +
-                   "VALUES ((SELECT ISNULL(MAX(session_ID), 0) + 1 FROM SessionTable), @Name, @Notes)";
+            cmd2.CommandText = "INSERT INTO SessionTable (session_ID, Name, Notes, character_ID) " +
+                   "VALUES ((SELECT ISNULL(MAX(session_ID), 0) + 1 FROM SessionTable), @Name, @Notes, (SELECT ISNULL(MAX(session_ID), 0) + 1 FROM SessionTable))";
             cmd2.Connection = sqlConnection2;
 
             sqlConnection2.Open();
 
+            characterID++;
+
             cmd2.Parameters.AddWithValue("@Name", name);  
             cmd2.Parameters.AddWithValue("@Notes", aboutMe);
-            //cmd2.Parameters.AddWithValue("@CharacterID", characterID);
+            cmd2.Parameters.AddWithValue("@character_ID", characterID);
 
             cmd2.ExecuteNonQuery();
             sqlConnection2.Close();
-
-
-
-
-            /*try
-            {
-                // add ability to send to database table:
-                
-                    
-
-                    string insertQuery = "INSERT INTO CharacterTable (name, level, gender, race, role, strength, dexterity, constitution, charisma, wisdom, intelligence) " +
-                                 "VALUES (@Name, @Level, @Gender, @Race, @Role, @Strength, @Dexterity, @Constitution, @Charisma, @Wisdom, @Intelligence, @Password)";
-
-                    using (SqlCommand command = new SqlCommand(insertQuery, connection))
-                    {
-                        command.Parameters.AddWithValue("@Name", name);
-                        command.Parameters.AddWithValue("@Gender", gender);
-                        command.Parameters.AddWithValue("@Race", race);
-                        command.Parameters.AddWithValue("@Role", role);
-                        command.Parameters.AddWithValue("@Level", level);
-                        command.Parameters.AddWithValue("@Strength", final_strength);
-                        command.Parameters.AddWithValue("@Dexterity", final_dexterity);
-                        command.Parameters.AddWithValue("@Constitution", final_constitution);
-                        command.Parameters.AddWithValue("@Charisma", final_charisma);
-                        command.Parameters.AddWithValue("@Wisdom", final_wisdom);
-                        command.Parameters.AddWithValue("@Intelligence", final_intelligence);
-                        command.Parameters.AddWithValue("@Password", password);
-
-                        command.ExecuteNonQuery();
-
-                        MessageBox.Show("Character was added to the database!", mscaption,
-                                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred while opening the database connection: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } 
-            finally
-            {
-                if (connection.State != ConnectionState.Closed)
-                    connection.Close();
-            } */
-
-
-
-
 
             nextPage();
 
@@ -1076,6 +1032,13 @@ namespace DnDCharacterCreator
             if (input >= 1 &&  input <= 3)
             {
                 level = input;
+            }
+            else
+            {
+                MessageBox.Show("Please input a number between 1 and 3", mscaption,
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                textBox_Level.Focus();
+                return;
             }
 
             if(usedPoints < MAX_POINTS)
